@@ -6,7 +6,7 @@
     <title>BussFeed | Cadastro de Empresa</title>
 </head>
 <body>
-    <form action="">
+    <form action="/cadastrar/empresa">
         <div>
             <label for="nome">Nome da empresa</label>
             <input type="text" name="nome">
@@ -27,9 +27,14 @@
             <label for="email">E-mail</label>
             <input type="text" name="email">
         </div>
+        <!--VALIDAR SENHA COM JS-->
         <div>
-            <label for="codigo">Código</label>
-            <input type="text" name="codigo" value="Codigo automatico" readonly>
+            <label for="senha">Senha</label>
+            <input type="text" name="senha">
+        </div>
+        <div>
+            <label for="senha-confirm">Confirme sua senha</label>
+            <input type="text" name="senha-confirm">
         </div>
         <input type="submit" value="Cadastrar">
     </form>
