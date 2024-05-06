@@ -7,7 +7,7 @@
     <title>BussFeed | Login</title>
 </head>
 <body>
-    <form action="" method="POST">
+    <form action="/home" method="POST">
         <div>
             <label for="email">E-mail</label>
             <input type="text" name="email">
@@ -20,7 +20,7 @@
     </form>
     <div>
         <p>ou</p>
-        <a href="#">Cadastre-se aqui</a>
+        <a href="/cadastro/type">Cadastre-se aqui</a>
     </div>
 </body>
 </html>
