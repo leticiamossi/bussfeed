@@ -6,7 +6,7 @@
     <title>BussFeed | Cadastro de Motorista</title>
 </head>
 <body>
-    <form action="">
+    <form action="/cadastrar/motorista" method="POST">
         <div>
             <label for="nome">Nome</label>
             <input type="text" name="nome">
@@ -30,25 +30,35 @@
         <div>
             <label for="cats-cnh">Categoria CNH</label>
             <div>
-                <input type="checkbox" name="cat-cnh" id="cat-a">
+                <input type="checkbox" name="cat-cnh[]" id="cat-a" value="cat-a">
                 <label for="cat-a">A</label>
             </div>
             <div>
-                <input type="checkbox" name="cat-cnh" id="cat-b">
+                <input type="checkbox" name="cat-cnh[]" id="cat-b" value="cat-b">
                 <label for="cat-b">B</label>
             </div>
             <div>
-                <input type="checkbox" name="cat-cnh" id="cat-c">
+                <input type="checkbox" name="cat-cnh[]" id="cat-c" value="cat-c">
                 <label for="cat-c">C</label>
             </div>
             <div>
-                <input type="checkbox" name="cat-cnh" id="cat-d">
+                <input type="checkbox" name="cat-cnh[]" id="cat-d" value="cat-d">
                 <label for="cat-d">D</label>
             </div>
             <div>
+                <input type="checkbox" name="cat-cnh[]" id="cat-e" value="cat-e">
                 <label for="cat-e">E</label>
-                <input type="checkbox" name="cat-cnh" id="cat-e">
             </div>
+        </div>
+
+        <div>
+            <label for="email">E-mail</label>
+            <input type="email" name="email">
+        </div>
+
+        <div>
+            <label for="senha">Senha</label>
+            <input type="password" name="senha">
         </div>
         
         <input type="submit" value="Cadastrar">
