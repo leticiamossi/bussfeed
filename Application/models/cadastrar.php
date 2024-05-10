@@ -22,6 +22,32 @@ class Cadastrar
                                 array(':ID' => $id, ':NOME' => $nome, ':EMAIL' => $email, ':SENHA' => $senha, ':CPF' => $cpf, ':CNH' => $cnh, ':CAT' => $cat, ':TEL' => $tel));
         return $result->rowCount();
     }
+
+    public static function insertPassageiro(string $nome, string $cpf, string $tel, string $email, string $senha, string $instituicao, string $ano)
+    {
+        $conn = new Database();
+        $result = $conn->executeQuery("INSERT INTO tb_aluno(nome_aluno, cpf_aluno, telefone_aluno, email_aluno, senha_aluno, instituição_aluno, ingresso_aluno) VALUES (:NOME, :CPF, :TEL, :EMAIL, :SENHA, :INST, :ANO)",
+                                array(':NOME' => $nome, ':CPF' => $cpf, ':TEL' => $tel, ':EMAIL' => $email, ':SENHA' => $senha, ':INST' => $instituicao, ':ANO' => $ano));
+        $select = $conn->executeQuery("SELECT id_aluno FROM tb_aluno WHERE cpf_aluno = :CPF LIMIT 1", array(':CPF' => $cpf));
+        return $select->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public static function insertEndereco(string $rua, string $num, string $bairro, string $cidade, string $estado, string $cep, string $idAluno)
+    {
+        $conn = new Database();
+        $result = $conn->executeQuery("INSERT INTO tb_endereco(rua_endereco, numero_endereco, bairro_endereco, cidade_endereco, estado_endereco, cep_endereco, aluno_id) VALUES (:RUA, :NUM, :BAIRRO, :CIDADE, :ESTADO, :CEP, :ID)",
+                                array(':RUA' => $rua, ':NUM' => $num, ':BAIRRO' => $bairro, ':CIDADE' => $cidade, ':ESTADO' => $estado, ':CEP' => $cep, ':ID' => $idAluno));
+        return $result->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public static function insertSolicitacao(string $codigo, string $aluno, string $solicitacao, string $expiracao)
+    {
+        $conn = new Database();
+        $result = $conn->executeQuery("INSERT INTO tb_alunoempresa(empresa_id, aluno_id, dataSolicitacao_alunoEmpresa, dataExpiracao_alunoEmpresa, status_alunoEmpresa) VALUES ((SELECT id_empresa FROM tb_empresa WHERE token_empresa = :COD), :ALUNO, :SOLICITACAO, :EXPIRACAO, '0')",
+                                array(':COD' => $codigo, ':ALUNO' => $aluno, ':SOLICITACAO' => $solicitacao, ':EXPIRACAO' => $expiracao));
+        return $result->rowCount();
+    }
+
 }
 
 ?>

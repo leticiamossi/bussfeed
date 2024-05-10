@@ -61,6 +61,39 @@ class Cadastrar extends Controller
             $this->view('erro404');
         }
     }
+
+    public function passageiro() {
+        $nome = $_POST['nome'];
+        $cpf = $_POST['cpf'];
+        $telefone = $_POST['telefone'];
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+        $rua = $_POST['rua'];
+        $numero = $_POST['numero'];
+        $bairro = $_POST['bairro'];
+        $cidade = $_POST['cidade'];
+        $estado = $_POST['estado'];
+        $cep = $_POST['cep'];
+        $instituicao = $_POST['instituicao'];
+        $ingresso = $_POST['ingresso'];
+        $ano = $ingresso.'-01';
+        $codigo = $_POST['codigo'];
+
+        $conn = $this->model('cadastrar');
+        $insert = $conn::insertPassageiro($nome, $cpf, $telefone, $email, $senha, $instituicao, $ano);
+        foreach($insert as $id){
+            $idAluno = $id['id_aluno'];
+        }
+        $insertEnd = $conn::insertEndereco($rua, $numero, $bairro, $cidade, $estado, $cep, $idAluno);
+
+        $solicitacao = date('Y-m-d');
+        if(date('m') >= 6){
+            $expiracao = date('Y')."-12-31";
+        } else {
+            $expiracao = date('Y')."-07-31";
+        }
+        $insertSolicitacao = $conn::insertSolicitacao($codigo, $idAluno, $solicitacao, $expiracao);
+    }
 }
 
 ?>
