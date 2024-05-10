@@ -6,8 +6,8 @@ use PDO;
 class Database extends PDO
 {
     //config do banco de dados
-    private $DB_NAME = '';
-    private $DB_USER = '';
+    private $DB_NAME = 'db_bussfeed';
+    private $DB_USER = 'root';
     private $DB_PASSWORD = '';
     private $DB_HOST = 'localhost';
     private $DB_PORT = 3306;
