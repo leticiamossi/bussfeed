@@ -93,6 +93,31 @@ class Cadastrar extends Controller
             $expiracao = date('Y')."-07-31";
         }
         $insertSolicitacao = $conn::insertSolicitacao($codigo, $idAluno, $solicitacao, $expiracao);
+
+        if($insert > 0 || $insertEnd > 0 || $insertSolicitacao > 0) {
+            header('Location: /consulta/veiculo');
+        } else {
+            $this->view('erro404');
+        }
+    }
+
+    public function veiculo() {
+        $empresa = $_SESSION['ID'];
+        $modelo = $_POST['modelo'];
+        $placa = $_POST['placa'];
+        $marca = $_POST['marca'];
+        $situacao = $_POST['situacao'];
+        $lugares = $_POST['lugares'];
+        $status = $_POST['status'];
+
+        $conn = $this->model('cadastrar');
+        $insert = $conn->insertVeiculo($empresa, $modelo, $placa, $marca, $situacao, $lugares, $status);
+
+        if($insert > 0) {
+            header('Location: /consulta/veiculo');
+        } else {
+            $this->view('erro404');
+        }
     }
 }
 

@@ -48,6 +48,13 @@ class Cadastrar
         return $result->rowCount();
     }
 
+    public static function insertVeiculo(string $empresa, string $modelo, string $placa, string $marca, string $situacao, string $lugares, string $status)
+    {
+        $conn = new Database();
+        $result = $conn->executeQuery("INSERT INTO tb_veiculo(empresa_id, modelo_veiculo, placa_veiculo, marca_veiculo, situacao_veiculo, qtdLugares_veiculo, status_veiculo) VALUES (:EMP, :MOD, :PLACA, :MARCA, :SIT, :LUG, :STAT)",
+                                array(':EMP' => $empresa, ':MOD' => $modelo, ':PLACA' => $placa, ':MARCA' => $marca, ':SIT' => $situacao, ':LUG' => $lugares, ':STAT' => $status));
+        $result->rowCount();
+    }
 }
 
 ?>
