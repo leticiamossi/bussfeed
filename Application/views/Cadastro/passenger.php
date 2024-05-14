@@ -6,7 +6,7 @@
     <title>BussFeed | Cadastro de Passageiro</title>
 </head>
 <body>
-    <form action="">
+    <form action="/cadastrar/passageiro" method="POST">
         <div>
             <label for="nome">Nome</label>
             <input type="text" name="nome">
@@ -27,6 +27,17 @@
             <input type="text" name="email">
         </div>
 
+        <!-- CONFERIR SENHAS COM JS-->
+        <div>
+            <label for="senha">Senha</label>
+            <input type="password" name="senha">
+        </div>
+
+        <div>
+            <label for="senha-confirm">Confirme a Senha</label>
+            <input type="password" name="senha-confirm">
+        </div>
+
         <div>
             <label for="rua">Rua</label>
             <input type="text" name="rua">
@@ -34,7 +45,7 @@
 
         <div>
             <label for="numero">nº</label>
-            <input type="text" name="numero">
+            <input type="number" name="numero">
         </div>
 
         <div>
@@ -53,8 +64,16 @@
         </div>
 
         <div>
+            <label for="cep">CEP</label>
+            <input type="text" name="cep">
+        </div>
+
+        <div>
             <label for="instituicao">Instituição</label>
-            <input type="text" name="instituicao">
+            <select name="instituicao" id="instituicao">
+                <!--Alimentar com nomes de IS-->
+                <option>Faculdades</option>
+            </select>
         </div>
 
         <div>

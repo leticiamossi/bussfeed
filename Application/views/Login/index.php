@@ -22,8 +22,20 @@
         </form>
     </div>
     <div class="container">
+    <form action="/home" method="POST">
+        <div>
+            <label for="email">E-mail</label>
+            <input type="text" name="email">
+        </div>
+        <div>
+            <label for="senha">Senha</label>
+            <input type="text" name="senha">
+        </div>
+        <input type="submit" value="Entrar">
+    </form>
+    <div>
         <p>ou</p>
-        <a href="#">Cadastre-se aqui</a>
+        <a href="/cadastro/type">Cadastre-se aqui</a>
     </div>
 </body>
 </html>
