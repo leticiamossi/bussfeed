@@ -8,34 +8,19 @@
     <link rel="stylesheet" href="public\assets\css\style.css">
 </head>
 <body>
+    <img class = img src="public\assets\img\img.jpg" alt="Pagina de login">
     <div class="login">
         <form action="" method="POST">
             <div>
                 <label for="email">E-mail</label>
-                <input class = email type="text" name="email">
+                <input class = input type="text" name="email">
             </div>
             <div>
                 <label for="senha">Senha</label>
-                <input class = senha type="text" name="senha">
+                <input class = input type="text" name="senha">
             </div>
             <input class = entrar type="submit" value="Entrar">
         </form>
-    </div>
-    <div class="container">
-    <form action="/home" method="POST">
-        <div>
-            <label for="email">E-mail</label>
-            <input type="text" name="email">
-        </div>
-        <div>
-            <label for="senha">Senha</label>
-            <input type="text" name="senha">
-        </div>
-        <input type="submit" value="Entrar">
-    </form>
-    <div>
-        <p>ou</p>
-        <a href="/cadastro/type">Cadastre-se aqui</a>
     </div>
 </body>
 </html>
