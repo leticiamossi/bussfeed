@@ -53,7 +53,15 @@ class Cadastrar
         $conn = new Database();
         $result = $conn->executeQuery("INSERT INTO tb_veiculo(empresa_id, modelo_veiculo, placa_veiculo, marca_veiculo, situacao_veiculo, qtdLugares_veiculo, status_veiculo) VALUES (:EMP, :MOD, :PLACA, :MARCA, :SIT, :LUG, :STAT)",
                                 array(':EMP' => $empresa, ':MOD' => $modelo, ':PLACA' => $placa, ':MARCA' => $marca, ':SIT' => $situacao, ':LUG' => $lugares, ':STAT' => $status));
-        $result->rowCount();
+        return $result->rowCount();
+    }
+
+    public static function insertPonto(string $id, string $apelido, string $rua, string $bairro, string $cidade, string $ponto, string $hora)
+    {
+        $conn = new Database();
+        $result = $conn->executeQuery("INSERT INTO tb_pontoEspera(empresa_id, apelido_pontoEspera, rua_pontoEspera, bairro_pontoEspera, cidade_pontoEspera, pontoReferencia_pontoEspera, hora_pontoEspera) VALUES (:ID, :APEL, :RUA, :BAIRRO, :CIDADE, :PONTO, :HORA)",
+                                array(':ID' => $id, ':APEL' => $apelido, ':RUA' => $rua, ':BAIRRO' => $bairro, ':CIDADE' => $cidade, ':PONTO' => $ponto, ':HORA' => $hora));
+        return $result->rowCount();
     }
 }
 

@@ -119,6 +119,25 @@ class Cadastrar extends Controller
             $this->view('erro404');
         }
     }
+
+    public function ponto() {
+        $empresa = $_SESSION['ID'];
+        $apelido = $_POST['apelido'];
+        $rua = $_POST['rua'];
+        $bairro = $_POST['bairro'];
+        $cidade = $_POST['cidade'];
+        $ponto = $_POST['ponto-ref'];
+        $hora = $_POST['hora'];
+
+        $conn = $this->model('cadastrar');
+        $insert = $conn::insertPonto($empresa, $apelido, $rua, $bairro, $cidade, $ponto, $hora);
+
+        if($insert > 0) {
+            header('Location: /consulta/ponto');
+        } else {
+            $this->view('erro404');
+        }
+    }
 }
 
 ?>
