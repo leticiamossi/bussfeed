@@ -7,6 +7,7 @@
     content: normal;
     padding: 5px;
     margin: 0 auto;
+    justify-content: center;
     text-align: center;
 }
 
@@ -28,31 +29,18 @@
   padding: 50px;
 }
 
-img {
+.intro {
   display: fixed;
   margin: 5px; /* Adiciona margens */
   max-width: 100%;
   max-height: 30%;
   border-radius: 50px;
-  filter: brightness(0.5); /* Escurece a imagem em 30% */
 }
 
-/* Estilo Global do Header */
-.header {
-    background-color: #fff; /* Cor de fundo */
-    padding: 10px 20px; /* Espaçamento interno */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
-  }
-  
-  /* Container para os itens do menu principal */
-  .menu-principal {
-    display: flex; /* Organiza os itens em linha */
-    justify-content: space-between; /* Distribui o espaço entre os itens */
-    align-items: center; /* Alinha os itens verticalmente */
-  }
-  
-  /* Estilo para cada item do menu principal */
-  .menu-principal li {
-    display: inline-block; /* Exibe os itens como blocos em linha */
-    margin-right: 20px; /* Espaçamento entre os itens */
-  }
+.img {
+  display: flexbox;
+  margin: 10px;
+  max-width: 100%;
+  max-height: 30%;
+  border-radius: 50px;
+}

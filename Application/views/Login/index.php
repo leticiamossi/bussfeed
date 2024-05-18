@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="public\assets\css\style.css">
 </head>
 <body>
-    <img class = img src="public\assets\img\img.jpg" alt="Pagina de login">
+    <div>
+        <img class = "intro" scr = "public\assets\img\parallax.png" alt = "parallax">
+        <img class = "img" src="public\assets\img\titulo.png" alt="Pagina de login">
+    </div>
     <div class="login">
         <form action="" method="POST">
             <div>
