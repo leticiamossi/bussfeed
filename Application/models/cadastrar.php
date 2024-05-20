@@ -7,11 +7,11 @@ use PDO;
 
 class Cadastrar 
 {
-    public static function insertEmpresa(string $nome, string $resp, string $cnpj, string $email, string $senha, string $tel, string $token) 
+    public static function insertEmpresa(string $nome, string $resp, string $cnpj, string $email, string $senha, string $tel, string $token, string $validade) 
     {
         $conn = new Database();
-        $result = $conn->executeQuery("INSERT INTO tb_empresa(nome_empresa, responsavel_empresa, cnpj_empresa, email_empresa, senha_empresa, telefone_empresa, status_empresa, token_empresa VALUES (:NOME, :RESP, :CNPJ, :EMAIL, :SENHA, :TEL, '1', :TOKEN)",
-                                array(':NOME' => $nome, ':RESP' => $resp, ':CNPJ' => $cnpj, ':EMAIL' => $email, ':SENHA' => $senha, ':TEL' => $tel, ':TOKEN' => $token));
+        $result = $conn->executeQuery("INSERT INTO tb_empresa(nome_empresa, responsavel_empresa, cnpj_empresa, email_empresa, senha_empresa, telefone_empresa, status_empresa, token_empresa, validade_empresa) VALUES (:NOME, :RESP, :CNPJ, :EMAIL, :SENHA, :TEL, '1', :TOKEN, :VALID)",
+                                array(':NOME' => $nome, ':RESP' => $resp, ':CNPJ' => $cnpj, ':EMAIL' => $email, ':SENHA' => $senha, ':TEL' => $tel, ':TOKEN' => $token, ':VALID' => $validade));
         return $result->rowCount();
     }
 
