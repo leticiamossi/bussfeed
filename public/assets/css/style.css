@@ -2,45 +2,125 @@
 
 /*Estilo Global dos inputs*/
 * {
-    font-family:'Montserrat';
-    background-color: white;
-    content: normal;
-    padding: 5px;
-    margin: 0 auto;
-    justify-content: center;
-    text-align: center;
+  font-family:'Montserrat';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f9f9f9;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 100;
+}
+
+h1 {
+
+  color:#f45b5b;
+  font-family: 'Montserrat', bold;
+  font-style: italic;
+}
+
+.logoDesc {
+  font-size: 2em;
+  font-weight: 700;
+  color: #f45b5b;
+  pointer-events: none;
+  margin-right: 270px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+.navigation a:hover, 
+.navigation a.active {
+  background: #f45b5b;
+  color: white;
+}
+
+.parallax {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.parallax .logo {
+  max-width: 15%;
+  min-width: 15%;
+}
+
+.text1 {
+  position: absolute;
+  max-width: 50%;
+  min-width: 50%;
+}
+
+.text2 {
+  position: absolute;
+  max-width: 50%;
+  min-width: 50%;
+}
+
+.parallax .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.sec {
+  position: relative;
+  background: #f9f9f9;
+  padding: 100px;
+}
+
+.sec h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
 }
 
 .input {
-    background-color: rgb(236, 236, 236);
-    border-radius: 10cm;
+  background-color: rgb(236, 236, 236);
+  border-radius: 10cm;
 }
 
 .entrar {
-    font-style: italic;
-    background-color: rgb(163, 223, 203);
-    border: 1px;
-    border-radius: 10px;
+  font-style: italic;
+  background-color: rgb(163, 223, 203);
+  border: 1px;
+  border-radius: 10px;
 }
 
 .login { /*container completo de login*/
-  display: flow-root;
-  align-items: center;
-  padding: 50px;
+display: flow-root;
+align-items: center;
+padding: 50px;
 }
 
 .intro {
-  display: fixed;
-  margin: 5px; /* Adiciona margens */
-  max-width: 100%;
-  max-height: 30%;
-  border-radius: 50px;
-}
-
-.img {
-  display: flexbox;
-  margin: 10px;
-  max-width: 100%;
-  max-height: 30%;
-  border-radius: 50px;
+display: relative;
+margin: 5px;
+max-width: 100%;
+max-height: 30%;
 }
