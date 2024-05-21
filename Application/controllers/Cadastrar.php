@@ -14,11 +14,12 @@ class Cadastrar extends Controller
         $telefone = $_POST['telefone'];
         $validade = date('Y') . "-12-31";
 
-        $token = random_bytes(10);
+        $token = bin2hex(random_bytes(10));
 
         $conn = $this->model('cadastrar');
         $insert = $conn::insertEmpresa($nome, $responsavel, $cnpj, $email, $senha, $telefone, $token, $validade);
-
+        header('Location: /home/empresa');
+        
         if ($insert > 0) {
             header('Location: /home/empresa');
         } else {

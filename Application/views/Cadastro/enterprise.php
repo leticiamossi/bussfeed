@@ -6,7 +6,7 @@
     <title>BussFeed | Cadastro de Empresa</title>
 </head>
 <body>
-    <form action="/cadastrar/empresa">
+    <form action="/cadastrar/empresa" method="POST">
         <div>
             <label for="nome">Nome da empresa</label>
             <input type="text" name="nome">
