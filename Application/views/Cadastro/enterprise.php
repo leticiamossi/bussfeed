@@ -30,11 +30,11 @@
         <!--VALIDAR SENHA COM JS-->
         <div>
             <label for="senha">Senha</label>
-            <input type="text" name="senha">
+            <input type="password" name="senha">
         </div>
         <div>
             <label for="senha-confirm">Confirme sua senha</label>
-            <input type="text" name="senha-confirm">
+            <input type="password" name="senha-confirm">
         </div>
         <input type="submit" value="Cadastrar">
     </form>

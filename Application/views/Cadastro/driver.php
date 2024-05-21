@@ -56,9 +56,15 @@
             <input type="email" name="email">
         </div>
 
+        <!--VALIDAR-->
         <div>
             <label for="senha">Senha</label>
             <input type="password" name="senha">
+        </div>
+
+        <div>
+            <label for="connfirm-senha">Confirme a Senha</label>
+            <input type="password" name="confirm-senha">
         </div>
         
         <input type="submit" value="Cadastrar">
