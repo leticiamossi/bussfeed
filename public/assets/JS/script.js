@@ -2,6 +2,8 @@ let logo = document.getElementById('logo');
 let text1 = document.getElementById('text1');
 let text2 = document.getElementById('text2');
 
+console.log(logo);
+
 window.addEventListener('scroll', () => {
     let value = window.scrollY;
 

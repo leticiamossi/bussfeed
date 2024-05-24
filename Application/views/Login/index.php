@@ -17,10 +17,9 @@
         </nav>
     </header>
     <section class="parallax">
-        <img class="logo" src="public\assets\img\parallax.png" alt="Logo Parallax">
-        <img class="text1" src="public\assets\img\parallax1.png" alt="Palma Parallax">
-        <img class="text2" src="public\assets\img\parallax2.png" alt="Mão Parallax">
-        <img class="img" src="public\assets\img\titulo.png" alt = "titulo">
+        <img class="logo" id="logo" src="public\assets\img\parallax.png" alt="Logo Parallax">
+        <img class="text1" id="text1" src="public\assets\img\parallax1.png" alt="Palma Parallax">
+        <img class="text2" id="text2" src="public\assets\img\parallax2.png" alt="Mão Parallax">
     </section>
     <section class="sec">
         <h1>Sou Estudante</h1>
@@ -38,6 +37,6 @@
             <input class=entrar type="submit" value="Entrar">
         </form>
     </div>
-    <script src="script.js"></script>
+    <script src="public/assets/JS/script.js"></script>
 </body>
 </html>

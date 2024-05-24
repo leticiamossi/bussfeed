@@ -57,28 +57,37 @@ h1 {
 }
 
 .parallax {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  background: url(../../assets/img/titulo.png);
+  width: 100%;
+  min-height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.parallax:hover{
+  opacity: 50%;
+  filter: blur(5px);
 }
 
 .parallax .logo {
-  max-width: 15%;
-  min-width: 15%;
+  position: absolute;
+  max-width: 10%;
+  min-width: 10%;
+
 }
 
 .text1 {
   position: absolute;
-  max-width: 50%;
-  min-width: 50%;
+  max-width: 45%;
+  min-width: 45%;
 }
 
 .text2 {
   position: absolute;
-  max-width: 50%;
-  min-width: 50%;
+  max-width: 45%;
+  min-width: 45%;
 }
 
 .parallax .img {
