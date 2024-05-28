@@ -15,13 +15,13 @@
             <a href="Application\views\Home\enterprise.php">Sou Proprietário</a>
         </nav>
     </header>
-    <section class="parallax">
+    <section class="parallax" id = "parallax">
         <img class="logo" id="logo" src="public\assets\img\parallax.png" alt="Logo Parallax">
         <img class="text1" id="text1" src="public\assets\img\parallax1.png" alt="Palma Parallax">
         <img class="text2" id="text2" src="public\assets\img\parallax2.png" alt="Mão Parallax">
     </section>
     <section class="sec">
-        <h1>Sou Estudante</h1>
+        <h1>Sou Estudante!</h1>
     </section>
     <div class="login">
         <form action="" method="POST">

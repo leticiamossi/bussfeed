@@ -60,7 +60,7 @@ h1 {
   filter: brightness(0.75);
   background-color: black;
   width: 100%;
-  min-height: 600px;
+  min-height: 900px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -68,41 +68,31 @@ h1 {
 }
 
 .parallax .logo {
-  position: static;
-  left: 500px;
-  top: 100px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  max-width: 30%;
+  max-height: 30%;
 }
 
-#text1 {
+.text1 {
+  position: relative;
   left: 500px;
   top: 100px;
+  max-width: 50%;
+  max-height: 50%;
 }
 
-#text2 {
+.text2 {
+  position: relative;
   left: 500px;
   top: 100px;
+  max-width: 50%;
+  max-height: 50%;
 }
 
 .parallax:hover{
   filter: blur(5px);  
-}
-
-.parallax .logo {
-  position: absolute;
-  max-width: 10%;
-  min-width: 10%;
-}
-
-.text1 {
-  position: absolute;
-  max-width: 45%;
-  min-width: 45%;
-}
-
-.text2 {
-  position: absolute;
-  max-width: 45%;
-  min-width: 45%;
 }
 
 .parallax .img {
@@ -114,7 +104,6 @@ h1 {
 }
 
 .sec {
-  position: relative;
   background: #f9f9f9;
   padding: 100px;
 }
@@ -136,7 +125,7 @@ h1 {
   border-radius: 10px;
 }
 
-.login { /*container completo de login*/
+.login {
 display: flow-root;
 align-items: center;
 padding: 50px;
