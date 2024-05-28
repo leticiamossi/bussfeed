@@ -7,6 +7,14 @@ use PDO;
 
 class Cadastrar 
 {
+    public static function insertUsuario(string $email, string $senha, string $nivel)
+    {
+        $conn = new Database();
+        $result = $conn->executeQuery("INSERT INTO tb_usuarios(email_usuario, senha_usuario, nivel_usuario) VALUES (:EMAIL, :SENHA, :NIVEL)",
+                                array(':EMAIL' => $email, ':SENHA' => $senha, ':NIVEL' => $nivel));
+        return $result->rowCount();
+    }
+
     public static function insertEmpresa(string $nome, string $resp, string $cnpj, string $email, string $senha, string $tel, string $token, string $validade) 
     {
         $conn = new Database();

@@ -18,6 +18,7 @@ class Cadastrar extends Controller
 
         $conn = $this->model('cadastrar');
         $insert = $conn::insertEmpresa($nome, $responsavel, $cnpj, $email, $senha, $telefone, $token, $validade);
+        $insertUser = $conn::insertUsuario($email, $senha, '1');
         header('Location: /home/empresa');
         
         if ($insert > 0) {
@@ -59,6 +60,7 @@ class Cadastrar extends Controller
 
         $conn = $this->model('cadastrar');
         $insert = $conn::insertMotorista($id, $nome, $email, $senha, $cpf, $cnh, $categorias, $telefone);
+        $insertUser = $conn::insertUsuario($email, $senha, '3');
 
         if ($insert > 0) {
             header('Location: /consulta/driver');
@@ -87,6 +89,7 @@ class Cadastrar extends Controller
 
         $conn = $this->model('cadastrar');
         $insert = $conn::insertPassageiro($nome, $cpf, $telefone, $email, $senha, $instituicao, $ano);
+        $insertUser = $conn::insertUsuario($email, $senha, '2');
         foreach ($insert as $id) {
             $idAluno = $id['id_aluno'];
         }
