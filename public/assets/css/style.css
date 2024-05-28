@@ -57,7 +57,6 @@ h1 {
 
 .parallax {
   background: url(../../assets/img/titulo.png);
-  filter: brightness(0.75);
   background-color: black;
   width: 100%;
   min-height: 900px;
@@ -92,7 +91,7 @@ h1 {
 }
 
 .parallax:hover{
-  filter: blur(5px);  
+  filter: brightness(0.75);
 }
 
 .parallax .img {
