@@ -24,14 +24,14 @@
         <h1>Sou Estudante!</h1>
     </section>
     <div class="login">
-        <form action="" method="POST">
+        <form action="/login/login" method="POST">
             <div>
                 <label for="email">E-mail</label>
                 <input class=input type="text" name="email">
             </div>
             <div>
                 <label for="senha">Senha</label>
-                <input class=input type="text" name="senha">
+                <input class=input type="password" name="senha">
             </div>
             <input class=entrar type="submit" value="Entrar">
         </form>

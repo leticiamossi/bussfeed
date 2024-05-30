@@ -9,6 +9,62 @@ class Login extends Controller
     {
         $this->view('login/index');
     }
+
+    public function login()
+    {
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+
+        $conn = $this->model('login');
+        $data = $conn->findNivelUser($email, $senha);
+
+        if(!empty($data))
+        {
+            session_start();
+            foreach($data as $user){
+                $_SESSION['nivel'] = $user['nivel_usuario'];
+            }
+            
+            switch($_SESSION['nivel'])
+            {
+                case 1:
+                    $empresa = $conn::findEmpresa($email, $senha);
+                    foreach($empresa as $aux){
+                        $_SESSION['ID'] = $aux['id_empresa'];
+                    }
+                    header("Location: /home/empresa");
+                    break;
+                case 2:
+                    $passageiro = $conn::findPassageiro($email, $senha);
+                    foreach($passageiro as $aux){
+                        $_SESSION['ID'] = $aux['id_aluno'];
+                    }
+                    header("Location: /home/passageiro");
+                    break;
+                case 3:
+                    $motorista = $conn::findMotorista($email, $senha);
+                    foreach($motorista as $aux){
+                        $_SESSION['ID'] = $aux['id_motorista'];
+                    }
+                    header("Location: /home/motorista");
+                    break;
+            }
+        } else {
+            $this->view('erro404');
+        }
+
+    }
+
+    public function logout()
+    {
+        $this->verification();
+        if($this->permission){
+            session_destroy();
+            $this->permission = false;
+            echo "<script>window.location.href = '/login';</script>";
+        }
+        $this->view('login/index');
+    }
 }
 
 ?>

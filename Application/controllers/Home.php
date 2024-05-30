@@ -4,18 +4,24 @@ use Application\core\Controller;
 
 class Home extends Controller
 {
-    public function index() {
-        $this->view('home/index');
-    }
-    
     public function empresa()
     {
-        $this->view('home/enterprise');
+        $this->verification();
+        if($this->permission){
+            $this->view('home/enterprise');
+        } else {
+            $this->view('erro404');
+        }
     }
 
     public function passageiro()
     {
-        $this->view('home/passenger');
+        $this->verification();
+        if($this->permission){
+            $this->view('home/passenger');
+        } else {
+            $this->view('erro404');
+        }
     }
 
     public function motorista()

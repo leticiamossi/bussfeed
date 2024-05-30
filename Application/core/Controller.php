@@ -40,7 +40,7 @@ class Controller
         if(!isset($_SESSION)) session_start();
 
         //verifica se não há variavel da sessao que identifica o usuario
-        if(!isset($_SESSION['UsuarioID'])) {
+        if(!isset($_SESSION['ID'])) {
             //Destroi a sessao 
             session_destroy();
             $this->pageNotFound();

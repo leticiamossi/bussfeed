@@ -10,12 +10,7 @@
 
 <body>
 <header>
-     <h2 class="logoDesc">Bussfeed</h2>
-        <nav class="navigation">
-            <a href="Application\views\Home\passenger.php" class="active">Sou Estudante</a>
-            <a href="Application\views\Home\driver.php">Sou Motorista</a>
-            <a href="Application\views\Home\enterprise.php">Sou Proprietário</a>
-        </nav>
+    <a href="/login/logout">Sair</a>
 </header>
     <main>
         <section>

@@ -10,7 +10,7 @@
 
 <body>
     <header>
-
+        <a href="/login/logout">Sair</a>
     </header>
     <main>
         <section>

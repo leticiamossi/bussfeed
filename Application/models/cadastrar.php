@@ -10,7 +10,7 @@ class Cadastrar
     public static function insertUsuario(string $email, string $senha, string $nivel)
     {
         $conn = new Database();
-        $result = $conn->executeQuery("INSERT INTO tb_usuarios(email_usuario, senha_usuario, nivel_usuario) VALUES (:EMAIL, :SENHA, :NIVEL)",
+        $result = $conn->executeQuery("INSERT INTO tb_usuarios(email_usuario, senha_usuario, nivel_usuario) VALUES (:EMAIL, SHA1(:SENHA), :NIVEL)",
                                 array(':EMAIL' => $email, ':SENHA' => $senha, ':NIVEL' => $nivel));
         return $result->rowCount();
     }
@@ -18,7 +18,7 @@ class Cadastrar
     public static function insertEmpresa(string $nome, string $resp, string $cnpj, string $email, string $senha, string $tel, string $token, string $validade) 
     {
         $conn = new Database();
-        $result = $conn->executeQuery("INSERT INTO tb_empresa(nome_empresa, responsavel_empresa, cnpj_empresa, email_empresa, senha_empresa, telefone_empresa, status_empresa, token_empresa, validade_empresa) VALUES (:NOME, :RESP, :CNPJ, :EMAIL, :SENHA, :TEL, '1', :TOKEN, :VALID)",
+        $result = $conn->executeQuery("INSERT INTO tb_empresa(nome_empresa, responsavel_empresa, cnpj_empresa, email_empresa, senha_empresa, telefone_empresa, status_empresa, token_empresa, validade_empresa) VALUES (:NOME, :RESP, :CNPJ, :EMAIL, SHA1(:SENHA), :TEL, '1', :TOKEN, :VALID)",
                                 array(':NOME' => $nome, ':RESP' => $resp, ':CNPJ' => $cnpj, ':EMAIL' => $email, ':SENHA' => $senha, ':TEL' => $tel, ':TOKEN' => $token, ':VALID' => $validade));
         return $result->rowCount();
     }
@@ -26,7 +26,7 @@ class Cadastrar
     public static function insertMotorista(string $id, string  $nome, string $email, string $senha, string $cpf, string $cnh, string $cat, string $tel)
     {
         $conn = new Database();
-        $result = $conn->executeQuery("INSERT INTO tb_motorista(empresa_id, nome_motorista, email_motorista, senha_motorista, cpf_motorista, cnh_motorista, categoriaCnh_motorista, telefone_motorista) VALUES (:ID, :NOME, :EMAIL, :SENHA, :CPF, :CNH, :CAT, :TEL)",
+        $result = $conn->executeQuery("INSERT INTO tb_motorista(empresa_id, nome_motorista, email_motorista, senha_motorista, cpf_motorista, cnh_motorista, categoriaCnh_motorista, telefone_motorista) VALUES (:ID, :NOME, :EMAIL, SHA1(:SENHA), :CPF, :CNH, :CAT, :TEL)",
                                 array(':ID' => $id, ':NOME' => $nome, ':EMAIL' => $email, ':SENHA' => $senha, ':CPF' => $cpf, ':CNH' => $cnh, ':CAT' => $cat, ':TEL' => $tel));
         return $result->rowCount();
     }
@@ -34,7 +34,7 @@ class Cadastrar
     public static function insertPassageiro(string $nome, string $cpf, string $tel, string $email, string $senha, string $instituicao, string $ano)
     {
         $conn = new Database();
-        $result = $conn->executeQuery("INSERT INTO tb_aluno(nome_aluno, cpf_aluno, telefone_aluno, email_aluno, senha_aluno, instituição_aluno, ingresso_aluno) VALUES (:NOME, :CPF, :TEL, :EMAIL, :SENHA, :INST, :ANO)",
+        $result = $conn->executeQuery("INSERT INTO tb_aluno(nome_aluno, cpf_aluno, telefone_aluno, email_aluno, senha_aluno, instituição_aluno, ingresso_aluno) VALUES (:NOME, :CPF, :TEL, :EMAIL, SHA1(:SENHA), :INST, :ANO)",
                                 array(':NOME' => $nome, ':CPF' => $cpf, ':TEL' => $tel, ':EMAIL' => $email, ':SENHA' => $senha, ':INST' => $instituicao, ':ANO' => $ano));
         $select = $conn->executeQuery("SELECT id_aluno FROM tb_aluno WHERE cpf_aluno = :CPF LIMIT 1", array(':CPF' => $cpf));
         return $select->fetchAll(PDO::FETCH_ASSOC);

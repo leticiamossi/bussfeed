@@ -104,7 +104,7 @@ class Cadastrar extends Controller
         $insertSolicitacao = $conn::insertSolicitacao($codigo, $idAluno, $solicitacao, $expiracao);
 
         if ($insert > 0 || $insertEnd > 0 || $insertSolicitacao > 0) {
-            header('Location: /consulta/veiculo');
+            header('Location: /home/passageiro');
         } else {
             $this->view('erro404');
         }
