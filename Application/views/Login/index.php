@@ -9,11 +9,6 @@
 <body>
     <header>
         <h2 class="logoDesc">Bussfeed</h2>
-        <nav class="navigation">
-            <a href="Application\views\Home\passenger.php" class="active">Sou Estudante</a>
-            <a href="Application\views\Home\driver.php">Sou Motorista</a>
-            <a href="Application\views\Home\enterprise.php">Sou Proprietário</a>
-        </nav>
     </header>
     <section class="parallax" id = "parallax">
         <img class="logo" id="logo" src="public\assets\img\parallax.png" alt="Logo Parallax">
