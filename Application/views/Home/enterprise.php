@@ -14,10 +14,21 @@
     <main>
         <section>
             <div>
-                <p>Hoje, 15 de maio</p>
+                <p>Hoje, 
+                    <?php 
+                    date_default_timezone_set('America/Bahia');
+                    echo date("d/m");
+                    ?>
+                    </p>
                 <p>Estimativa: 20 pessoas</p>
             </div>
-            <a href="#">
+            <a href="/viagem/criar">
+                <div>
+                    <!--Botão-->
+                    <p>Criar Viagem</p>
+                </div>
+            </a>
+            <a href="/viagem/empresa">
                 <div>
                     <!--Botão-->
                     <p>Viagem de Hoje</p>
@@ -26,20 +37,40 @@
             </a>
         </section>
         <section>
+            <a href="/perfil/empresa">
+                <div>
+                    <!--Botão-->
+                    <p>Meu Perfil</p>
+                </div>
+            </a>
+            <a href="/solicitacoes">
+                <div>
+                    <!--Botão-->
+                    <p>Solicitações</p>
+                </div>
+            </a>
+            <a href="/consulta/viagens">
+                <div>
+                    <!--Botão-->
+                    <p>Minhas Viagens</p>
+                </div>
+            </a>
+        </section>
+        <section>
             <h3>Cadastros e alterações</h3>
-            <a href="#">
+            <a href="/consulta/veiculo">
                 <div>
                     <!--Botão-->
                     <p>Veículo</p>
                 </div>
             </a>
-            <a href="#">
+            <a href="/consulta/motorista">
                 <div>
                     <!--Botão-->
                     <p>Motorista</p>
                 </div>
             </a>
-            <a href="#">
+            <a href="/consulta/ponto">
                 <div>
                     <!--Botão-->
                     <p>Pontos</p>

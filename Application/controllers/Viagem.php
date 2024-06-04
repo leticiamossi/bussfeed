@@ -5,6 +5,28 @@ use Application\core\Database;
 
 class Viagem extends Controller
 {
+    public function criar()
+    {
+        $this->verification();
+        if($this->permission && $_SESSION['nivel'] == '1'){
+            $this->view('viagem/criar');
+        }
+    }
+
+    public function criada()
+    {
+        $this->verification();
+        if($this->permission && $_SESSION['nivel'] == '1'){
+            $destino = $_POST['destino'];
+            $data = $_POST['data'];
+
+            $conn = $this->model('viagem');
+            $insert = $conn::insertCriacaoViagem($destino, $data);
+            
+            header('Location: /home/empresa');
+        }
+    }
+
     public function ponto()
     {
         $this->view('viagem/point');
