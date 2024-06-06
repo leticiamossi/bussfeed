@@ -8,7 +8,9 @@ class Home extends Controller
     {
         $this->verification();
         if($this->permission){
-            $this->view('home/enterprise');
+            $conn = $this->model('home');
+            $viagens = $conn::listViagens();
+            $this->view('home/enterprise', ['viagens' => $viagens]);
         } else {
             $this->view('erro404');
         }
