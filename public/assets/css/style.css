@@ -40,21 +40,6 @@ h1 {
   margin-right: 270px;
 }
 
-.navigation a {
-  text-decoration: none;
-  color: white;
-  padding: 6px 15px;
-  border-radius: 20px;
-  margin: 0 10px;
-  font-weight: 600;
-}
-
-.navigation a:hover, 
-.navigation a.active {
-  background: #f45b5b;
-  color: white;
-}
-
 .parallax {
   background: url(../../assets/img/titulo.png);
   background-color: black;

@@ -7,7 +7,7 @@ window.addEventListener('scroll', () => {
 
     let value = window.scrollY;
 
-    logo.style.display = value * 1.5 + 'px'
+    logo.style.top = value * 1.5 + 'px'
     text1.style.left = value * 2.5 + 'px';
     text2.style.left = value * -2.5 + 'px';
 
