@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
+<?php
+date_default_timezone_set('America/Bahia');
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +16,13 @@
     </header>
     <main>
         <section>
-            <a href="#">
+            <a href="/viagem/passageiro">
                 <div>
                     <!--Botão-->
                     <p>Viagem para faculdade</p>
                 </div>
             </a>
-            <a href="#">
+            <a href="/viagem/passageiro">
                 <div>
                     <!--Botão-->
                     <p>Viagem para casa</p>
@@ -28,13 +30,13 @@
             </a>
         </section>
         <section>
-            <a href="#">
+            <a href="/consulta/viagens">
                 <div>
                     <!--Botão-->
                     <p>Minhas viagens</p>
                 </div>
             </a>
-            <a href="#">
+            <a href="/perfil/passageiro">
                 <div>
                     <!--Botão-->
                     <p>Meu perfil</p>
