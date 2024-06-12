@@ -19,9 +19,10 @@ class Viagem extends Controller
         if($this->permission && $_SESSION['nivel'] == '1'){
             $destino = $_POST['destino'];
             $data = $_POST['data'];
+            $id = $_SESSION['ID'];
 
             $conn = $this->model('viagem');
-            $insert = $conn::insertCriacaoViagem($destino, $data);
+            $insert = $conn::insertCriacaoViagem($destino, $data, $id);
             
             header('Location: /home/empresa');
         }

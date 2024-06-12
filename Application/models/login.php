@@ -35,7 +35,7 @@ class Login
     public static function findEmpresaPassageiro(string $email, string $senha)
     {
         $conn = new Database();
-        $result = $conn->executeQuery("SELECT id_empresa FROM tb_alunoempresa WHERE email_aluno = :EMAIL && senha_aluno = SHA1(:SENHA)",
+        $result = $conn->executeQuery("SELECT ae.empresa_id FROM tb_alunoempresa AS ae JOIN tb_aluno AS a ON ae.aluno_id = a.id_aluno WHERE a.email_aluno = :EMAIL && a.senha_aluno = SHA1(:SENHA)",
                                 array(':EMAIL' => $email, ':SENHA' => $senha));
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
