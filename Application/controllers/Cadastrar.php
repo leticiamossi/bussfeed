@@ -19,10 +19,10 @@ class Cadastrar extends Controller
         $conn = $this->model('cadastrar');
         $insert = $conn::insertEmpresa($nome, $responsavel, $cnpj, $email, $senha, $telefone, $token, $validade);
         $insertUser = $conn::insertUsuario($email, $senha, '1');
-        header('Location: /home/empresa');
+        header('Location: /login');
         
         if ($insert > 0) {
-            header('Location: /home/empresa');
+            header('Location: /login');
         } else {
             $this->view('erro404');
         }
@@ -104,7 +104,7 @@ class Cadastrar extends Controller
         $insertSolicitacao = $conn::insertSolicitacao($codigo, $idAluno, $solicitacao, $expiracao);
 
         if ($insert > 0 || $insertEnd > 0 || $insertSolicitacao > 0) {
-            header('Location: /home/passageiro');
+            header('Location: /login');
         } else {
             $this->view('erro404');
         }

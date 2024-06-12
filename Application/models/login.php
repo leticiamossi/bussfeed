@@ -32,6 +32,14 @@ class Login
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public static function findEmpresaPassageiro(string $email, string $senha)
+    {
+        $conn = new Database();
+        $result = $conn->executeQuery("SELECT id_empresa FROM tb_alunoempresa WHERE email_aluno = :EMAIL && senha_aluno = SHA1(:SENHA)",
+                                array(':EMAIL' => $email, ':SENHA' => $senha));
+        return $result->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public static function findMotorista(string $email, string $senha)
     {
         $conn = new Database();

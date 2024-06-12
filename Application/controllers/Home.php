@@ -8,8 +8,9 @@ class Home extends Controller
     {
         $this->verification();
         if($this->permission){
+            $id = $_SESSION['ID'];
             $conn = $this->model('home');
-            $viagens = $conn::listViagens();
+            $viagens = $conn::listViagens($id);
             $this->view('home/enterprise', ['viagens' => $viagens]);
         } else {
             $this->view('erro404');
@@ -20,7 +21,10 @@ class Home extends Controller
     {
         $this->verification();
         if($this->permission){
-            $this->view('home/passenger');
+            $id = $_SESSION['ID_EMP'];
+            $conn = $this->model('home');
+            $viagens = $conn::listViagens($id);
+            $this->view('home/passenger', ['viagens' => $viagens]);
         } else {
             $this->view('erro404');
         }

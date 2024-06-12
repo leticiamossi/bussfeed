@@ -36,8 +36,12 @@ class Login extends Controller
                     break;
                 case 2:
                     $passageiro = $conn::findPassageiro($email, $senha);
+                    $empresa = $conn::findEmpresaPassageiro($email, $senha);
                     foreach($passageiro as $aux){
                         $_SESSION['ID'] = $aux['id_aluno'];
+                    }
+                    foreach($empresa as $auxi){
+                        $_SESSION['ID_EMP'] = $auxi['id_empresa'];
                     }
                     header("Location: /home/passageiro");
                     break;
