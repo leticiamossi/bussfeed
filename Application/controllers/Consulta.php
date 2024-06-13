@@ -6,7 +6,13 @@ class Consulta extends Controller
 {
     public function motoristas()
     {
-        $this->view('consulta/driver');
+        $this->verification();
+        if($this->permission){
+            $id = $_SESSION['ID'];
+            $conn = $this->model('consulta');
+            $data = $conn::listMotoristas($id);
+            $this->view('consulta/driver', ['motoristas' => $data]);
+        }
     }
 
     public function ponto()

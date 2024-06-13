@@ -63,7 +63,7 @@ class Cadastrar extends Controller
         $insertUser = $conn::insertUsuario($email, $senha, '3');
 
         if ($insert > 0) {
-            header('Location: /consulta/driver');
+            header('Location: /consulta/motoristas');
         } else {
             $this->view('erro404');
         }
