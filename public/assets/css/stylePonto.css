@@ -12,6 +12,13 @@ body {
   overflow-x: hidden;
 }
 
+.logoPonto {
+    font-size: 4em;
+    font-weight: 700;
+    color: #f45b5b;
+    pointer-events: none;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -30,54 +37,9 @@ h1 {
   font-style: italic;
 }
 
-.logoDesc {
-  font-size: 4em;
-  font-weight: 700;
-  color: #f45b5b;
-  pointer-events: none;
-}
-
-.intro {
-  background: url(../../assets/img/titulo.png);
-  background-color: black;
-  width: 100%;
-  min-height: 1050px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.text1 {
-  position: absolute;
-  width: 500px;
-  left: 5px;
-  top: 200px;
-}
-
-.text2 {
-  position: absolute;
-  width: 600px;
-  left: 10px;
-  top: 500px;
-}
-
-.intro .img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  pointer-events: painted;
-}
-
 .sec {
   background: #ffffff;
   padding: 100px;
-}
-
-.sec h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
 }
 
 .input {
@@ -92,7 +54,10 @@ h1 {
   border-radius: 10px;
 }
 
-.login {
-  display: flex;
-  background: #ffffff;
+form {
+    padding: 50px;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    position: absolute;
 }

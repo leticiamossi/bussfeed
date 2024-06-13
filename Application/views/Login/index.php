@@ -10,15 +10,14 @@
     <header>
         <h2 class="logoDesc">Bussfeed</h2>
     </header>
-    <section class="parallax" id = "parallax">
-        <img class="logo" id="logo" src="public\assets\img\parallax.png" alt="Logo Parallax">
+    <section class="intro" id = "intro">
         <img class="text1" id="text1" src="public\assets\img\parallax1.png" alt="Palma Parallax">
         <img class="text2" id="text2" src="public\assets\img\parallax2.png" alt="Mão Parallax">
     </section>
     <section class="sec">
-        <h1>Sou Estudante!</h1>
-    </section>
-    <div class="login">
+        <h1>Seja bem vindo.</h1>
+        <h1>Realize seu login!</h1>
+        <div class="login">
         <form action="/login/login" method="POST">
             <div>
                 <label for="email">E-mail</label>
@@ -31,6 +30,7 @@
             <input class=entrar type="submit" value="Entrar">
         </form>
     </div>
+    </section>
     <script src="public/assets/JS/script.js"></script>
 </body>
 </html>
