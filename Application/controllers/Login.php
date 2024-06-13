@@ -41,7 +41,7 @@ class Login extends Controller
                         $_SESSION['ID'] = $aux['id_aluno'];
                     }
                     foreach($empresa as $auxi){
-                        $_SESSION['ID_EMP'] = $auxi['id_empresa'];
+                        $_SESSION['ID_EMP'] = $auxi['empresa_id'];
                     }
                     header("Location: /home/passageiro");
                     break;

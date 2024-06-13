@@ -10,68 +10,68 @@
     <form action="/cadastrar/passageiro" method="POST">
         <div>
             <label for="nome">Nome</label>
-            <input type="text" name="nome">
+            <input type="text" name="nome" required>
         </div>
 
         <div>
             <label for="cpf">CPF</label>
-            <input type="text" name="cpf">
+            <input type="text" name="cpf" required>
         </div>
 
         <div>
             <label for="telefone">Telefone</label>
-            <input type="text" name="telefone">
+            <input type="text" name="telefone" required>
         </div>
 
         <div>
             <label for="email">E-mail</label>
-            <input type="text" name="email">
+            <input type="text" name="email" required>
         </div>
 
         <!-- CONFERIR SENHAS COM JS-->
         <div>
             <label for="senha">Senha</label>
-            <input type="password" name="senha">
+            <input type="password" name="senha" required>
         </div>
 
         <div>
             <label for="senha-confirm">Confirme a Senha</label>
-            <input type="password" name="senha-confirm">
+            <input type="password" name="senha-confirm" required>
         </div>
 
         <div>
             <label for="rua">Rua</label>
-            <input type="text" name="rua">
+            <input type="text" name="rua" required>
         </div>
 
         <div>
             <label for="numero">nº</label>
-            <input type="number" name="numero">
+            <input type="number" name="numero" required>
         </div>
 
         <div>
             <label for="bairro">Bairro</label>
-            <input type="text" name="bairro">
+            <input type="text" name="bairro" required>
         </div>
 
         <div>
             <label for="cidade">Cidade</label>
-            <input type="text" name="cidade">
+            <input type="text" name="cidade" required>
         </div>
 
         <div>
             <label for="estado">Estado</label>
-            <input type="text" name="estado">
+            <input type="text" name="estado" required>
         </div>
 
         <div>
             <label for="cep">CEP</label>
-            <input type="text" name="cep">
+            <input type="text" name="cep" required>
         </div>
 
         <div>
             <label for="instituicao">Instituição</label>
-            <select name="instituicao" id="instituicao">
+            <select name="instituicao" id="instituicao" required>
                 <!--Alimentar com nomes de IS-->
                 <option>Faculdades</option>
             </select>
@@ -79,12 +79,12 @@
 
         <div>
             <label for="ingresso">Mês e ano de ingresso</label>
-            <input type="month" name="ingresso">
+            <input type="month" name="ingresso" required>
         </div>
 
         <div>
             <label for="codigo">Código da empresa</label>
-            <input type="text" name="codigo">
+            <input type="text" name="codigo" required>
         </div>
         
         <input type="submit" value="Cadastrar">
