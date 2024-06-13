@@ -11,32 +11,32 @@
 
         <div>
             <label for="apelido">Apelido</label>
-            <input type="text" name="apelido">
+            <input type="text" name="apelido" required>
         </div>
 
         <div>
             <label for="rua">Rua</label>
-            <input type="text" name="rua">
+            <input type="text" name="rua" required>
         </div>
 
         <div>
             <label for="bairro">Bairro</label>
-            <input type="text" name="bairro">
+            <input type="text" name="bairro" required>
         </div>
 
         <div>
             <label for="cidade">Cidade</label>
-            <input type="text" name="cidade">
+            <input type="text" name="cidade" required>
         </div>
 
         <div>
             <label for="ponto-ref">Ponto Referência</label>
-            <input type="text" name="ponto-ref">
+            <input type="text" name="ponto-ref" required>
         </div>
 
         <div>
             <label for="hora">Hora</label>
-            <input type="time" name="hora">
+            <input type="time" name="hora" required>
         </div>
 
         <input type="submit" value="Cadastrar">

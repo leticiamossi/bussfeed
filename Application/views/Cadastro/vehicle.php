@@ -10,7 +10,7 @@
     <form action="/cadastrar/veiculo" method="POST">
         <div>
             <label for="modelo">Modelo</label>
-            <select name="modelo" id="modelo">
+            <select name="modelo" id="modelo" required>
                 <option>Ônibus</option>
                 <option>Micro-Ônibus</option>
                 <option>Van</option>
@@ -19,17 +19,17 @@
 
         <div>
             <label for="placa">Placa</label>
-            <input type="text" name="placa">
+            <input type="text" name="placa" required>
         </div>
 
         <div>
             <label for="marca">Marca</label>
-            <input type="text" name="marca">
+            <input type="text" name="marca" required>
         </div>
 
         <div>
             <label for="situacao">Situação</label>
-            <select name="situacao" id="situacao">
+            <select name="situacao" id="situacao" required>
                 <option>Próprio</option>
                 <option>Alugado</option>
                 <option>Emprestado</option>
@@ -38,12 +38,12 @@
 
         <div>
             <label for="lugares">Quantidade de Lugares</label>
-            <input type="number" name="lugares">
+            <input type="number" name="lugares" required>
         </div>
 
         <div>
             <label for="status">Status</label>
-            <select name="status" id="status">
+            <select name="status" id="status" required>
                 <option>Ativo</option>
                 <option>Inativo</option>
                 <option>Manutenção</option>

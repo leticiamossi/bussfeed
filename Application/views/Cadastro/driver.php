@@ -10,22 +10,22 @@
     <form action="/cadastrar/motorista" method="POST">
         <div>
             <label for="nome">Nome</label>
-            <input type="text" name="nome">
+            <input type="text" name="nome" required>
         </div>
 
         <div>
             <label for="cpf">CPF</label>
-            <input type="text" name="cpf">
+            <input type="text" name="cpf" required>
         </div>
 
         <div>
             <label for="telefone">Telefone</label>
-            <input type="text" name="telefone">
+            <input type="text" name="telefone" required>
         </div>
 
         <div>
             <label for="cnh">CNH</label>
-            <input type="text" name="cnh">
+            <input type="text" name="cnh" required>
         </div>
 
         <div>
@@ -54,18 +54,18 @@
 
         <div>
             <label for="email">E-mail</label>
-            <input type="email" name="email">
+            <input type="email" name="email" required>
         </div>
 
         <!--VALIDAR-->
         <div>
             <label for="senha">Senha</label>
-            <input type="password" name="senha">
+            <input type="password" name="senha" required>
         </div>
 
         <div>
             <label for="connfirm-senha">Confirme a Senha</label>
-            <input type="password" name="confirm-senha">
+            <input type="password" name="confirm-senha" required>
         </div>
         
         <input type="submit" value="Cadastrar">

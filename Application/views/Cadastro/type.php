@@ -8,12 +8,12 @@
 </head>
 <body>
     <div>
-        <a href="#">
+        <a href="/cadastro/empresa">
             <button>Sou empresa</button>
         </a>
     </div>
     <div>
-        <a href="#">
+        <a href="/cadastro/passageiro">
             <button>Sou passageiro</button>
         </a>
     </div>

@@ -12,12 +12,12 @@
     <form action="">
         <div>
             <label for="ptn-espera">Ponto de espera</label>
-            <input type="text" name="ptn-espera">
+            <input type="text" name="ptn-espera" required>
         </div>
 
         <div>
             <label for="ptn-chegada">Ponto de chegada</label>
-            <input type="text" name="ptn-chegada">
+            <input type="text" name="ptn-chegada" required>
         </div>
 
         <div>
