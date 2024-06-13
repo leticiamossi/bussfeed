@@ -9,9 +9,15 @@ class Consulta extends Controller
         $this->view('consulta/driver');
     }
 
-    public function pontos()
+    public function ponto()
     {
-        $this->view('consulta/point');
+        $this->verification();
+        if($this->permission){
+            $id = $_SESSION['ID'];
+            $conn = $this->model('consulta');
+            $data = $conn::listPontos($id);
+            $this->view('consulta/point', ['pontos' => $data]);
+        }
     }
 
     public function veiculos()
