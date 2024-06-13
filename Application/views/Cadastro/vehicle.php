@@ -12,7 +12,7 @@
             <label for="modelo">Modelo</label>
             <select name="modelo" id="modelo" required>
                 <option>Ônibus</option>
-                <option>Micro-Ônibus</option>
+                <option>Micro ônibus</option>
                 <option>Van</option>
             </select>
         </div>

@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BussFeed | Veiculos</title>
     <link rel="stylesheet" href="../../public/assets/css/style.css">
 </head>
+
 <body>
     <header></header>
     <main>
         <h3>Meus Veículos</h3>
-        <div>
-            <div>
-                <h4>Veiculo 1</h4>
-                <p>Status: Ativo</p>
-                <img src="" alt="">
-            </div>
+        <section>
+            <?php foreach($data['veiculos'] as $veiculo){ ?>
             <div>
                 <div>
-                    <p>Modelo</p>
-                    <p>Van</p>
+                    <h4><?php echo $veiculo['modelo_veiculo'] ?></h4>
+                    <p>Status: <?php echo $veiculo['status_veiculo'] ?></p>
                 </div>
                 <div>
-                    <p>Placa</p>
-                    <p>XXXX XXXX</p>
-                </div>
-                <div>
-                    <p>Marca</p>
-                    <p>Mercedes</p>
-                </div>
-                <div>
-                    <p>Quantidade de lugares</p>
-                    <p>12</p>
-                </div>
-                <div>
-                    <p>Situação</p>
-                    <p>Próprio</p>
+                    <div>
+                        <p>Modelo</p>
+                        <p><?php echo $veiculo['modelo_veiculo'] ?></p>
+                    </div>
+                    <div>
+                        <p>Placa</p>
+                        <p><?php echo $veiculo['placa_veiculo'] ?></p>
+                    </div>
+                    <div>
+                        <p>Marca</p>
+                        <p><?php echo $veiculo['marca_veiculo'] ?></p>
+                    </div>
+                    <div>
+                        <p>Quantidade de lugares</p>
+                        <p><?php echo $veiculo['qtdLugares_veiculo'] ?></p>
+                    </div>
+                    <div>
+                        <p>Situação</p>
+                        <p><?php echo $veiculo['situacao_veiculo'] ?></p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <button>Cadastrar novo veículo</button>
+            <?php } ?>
+        </section>
+        <a href="/cadastro/veiculo"><button>Cadastrar novo veículo</button></a>
     </main>
 </body>
+
 </html>

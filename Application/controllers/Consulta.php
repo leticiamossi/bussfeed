@@ -28,7 +28,13 @@ class Consulta extends Controller
 
     public function veiculos()
     {
-        $this->view('consulta/vehicle');
+        $this->verification();
+        if($this->permission){
+            $id = $_SESSION['ID'];
+            $conn = $this->model('consulta');
+            $data = $conn::listVeiculos($id);
+            $this->view('consulta/vehicle', ['veiculos' => $data]);
+        }
     }
 
     public function viagemEmpresa()
