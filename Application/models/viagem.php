@@ -14,6 +14,14 @@ class Viagem
                             array(':DEST' => $destino, ':DAT' => $data, ':ID' => $id));
         $result->rowCount();
     }
+
+    public static function confirmarViagem(string $viagem, string $aluno, string $ponto)
+    {
+        $conn = new Database();
+        $result = $conn->executeQuery("INSERT INTO tb_pontoesperaaluno(idaluno, idpontoEspera, idviagem) VALUES (:ALU, :PONT, :VIAG)",
+                                                array(':ALU' => $aluno, ':PONT' => $ponto, ':VIAG' => $viagem));
+        return $result->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 
 ?>

@@ -15,11 +15,13 @@ date_default_timezone_set('America/Bahia');
     </header>
     <main>
         <p>Viagem <?php echo date("d/m/y")?></p>
-        <form action="/confirmar/passageiro" method="POST">
+        <form action="/confirmar/passageiro/<?php echo $data['id'] ?>" method="POST">
             <div>
                 <label for="ponto">Selecione o ponto</label>
                 <select name="ponto" id="ponto" required>
-                    <option>Ponto</option>
+                    <?php foreach($data['pontos'] as $ponto) { ?>
+                    <option value="<?php echo $ponto['id_pontoEspera'] ?>"><?php echo $ponto['apelido_pontoEspera'] ?></option>
+                    <?php } ?>
                 </select>
             </div>
             <input type="submit" value="Confirmar">
