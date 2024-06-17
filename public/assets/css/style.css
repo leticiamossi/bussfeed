@@ -21,7 +21,6 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  z-index: 100;
 }
 
 h1 {
@@ -31,10 +30,33 @@ h1 {
 }
 
 .logoDesc {
+  left: 25px;
+  position: absolute;
   font-size: 4em;
   font-weight: 700;
   color: #f45b5b;
   pointer-events: none;
+}
+
+.text1 {
+  position: absolute;
+  width: 350px;
+  left: 5px;
+  top: 100px;
+}
+
+.logo {
+  position: absolute;
+  width: 270px;
+  left: 38px;
+  top: 190px;
+}
+
+.text2 {
+  position: absolute;
+  width: 350px;
+  left: 30px;
+  top: 450px;
 }
 
 .intro {
@@ -46,20 +68,6 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-}
-
-.text1 {
-  position: absolute;
-  width: 500px;
-  left: 5px;
-  top: 200px;
-}
-
-.text2 {
-  position: absolute;
-  width: 600px;
-  left: 10px;
-  top: 500px;
 }
 
 .intro .img {

@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="../../public/assets/css/stylePonto.css">
 </head>
 <body>
-    <header class="headponto">
-        <h2 class="logoPonto">Bussfeed</h2>
+    <header>
+        <h2 class="logoDesc">Bussfeed</h2>
     </header>
     <p class="paragraph">Preparando sua viagem?</p>
     <form action="/cadastrar/ponto" method="POST" class="sec">

@@ -12,6 +12,7 @@
     </header>
     <section class="intro" id = "intro">
         <img class="text1" id="text1" src="public\assets\img\parallax1.png" alt="Palma Parallax">
+        <img src="public\assets\img\logo.png" alt="logo" class="logo">
         <img class="text2" id="text2" src="public\assets\img\parallax2.png" alt="Mão Parallax">
     </section>
     <section class="sec">
