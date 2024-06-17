@@ -4,7 +4,7 @@ use Application\core\Controller;
 
 class Cadastro extends Controller
 {
-    public function type()
+    public function tipo()
     {
         $this->view('cadastro/type');
     }
