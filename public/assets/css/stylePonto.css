@@ -4,6 +4,7 @@
 * {
   font-family:'Montserrat', sans-serif;
   margin: 0;
+
 }
 
 body {
@@ -38,7 +39,6 @@ h1 {
 }
 
 .sec {
-  background: #ffffff;
   padding: 100px;
 }
 
@@ -55,9 +55,9 @@ h1 {
 }
 
 form {
-    padding: 50px;
-    border-radius: 10px;
-    top: 0;
-    left: 0;
-    position: absolute;
+  top: 190px;
+  border-radius: 10px;
+  position: fixed;
+  right: 100px;
+  border: 10px;
 }

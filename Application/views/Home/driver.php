@@ -10,10 +10,10 @@
 
 <body>
 <header>
-    <a href="/login/logout">Sair</a>
+    <a href="/login/logout" class="input">Sair</a>
 </header>
     <main>
-        <section>
+        <section class="sec">
             <p>Hoje, 15 de maio</p>
             <p>Veiculo: xxx</p>
             <p>Quant. passageiros: xx</p>
@@ -23,7 +23,7 @@
             <a href="#">
                 <div>
                     <!--Botão-->
-                    <p>Minhas viagens</p>
+                    <p class="input">Minhas viagens</p>
                 </div>
             </a>
         </section>

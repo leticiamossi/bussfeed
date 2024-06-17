@@ -9,10 +9,10 @@
 </head>
 <body>
     <header>
-        <a href="/login/logout">Sair</a>
+        <a href="/login/logout" class="input">Sair</a>
     </header>
     <main>
-        <section>
+        <section class="sec">
             <div>
                 <p>Hoje, 
                     <?php 
@@ -29,7 +29,7 @@
             </a>
             <?php foreach($data['viagens'] as $viagem){?>
             <a href="/viagem/empresa/<?php echo $viagem['id_viagem']; ?>">
-                <div>
+                <div class="input">
                     <!--Botão-->
                     <p>Viagem de Hoje</p>
                     <p>Destino: <?php echo $viagem['destino_viagem']; ?></p>
@@ -37,7 +37,7 @@
             </a>
             <?php } ?>
         </section>
-        <section>
+        <section class="sec">
             <a href="/perfil/empresa">
                 <div>
                     <!--Botão-->
@@ -57,7 +57,7 @@
                 </div>
             </a>
         </section>
-        <section>
+        <section class="sec">
             <h3>Cadastros e alterações</h3>
             <a href="/consulta/veiculo">
                 <div>
