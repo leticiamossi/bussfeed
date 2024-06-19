@@ -9,41 +9,41 @@
 </head>
 
 <body>
-    <form action="">
+    <form action="" class="sec">
         <div>
             <label for="ptn-espera">Ponto de espera</label>
-            <input type="text" name="ptn-espera" required>
+            <input type="text" name="ptn-espera" class="input" required>
         </div>
 
         <div>
             <label for="ptn-chegada">Ponto de chegada</label>
-            <input type="text" name="ptn-chegada" required>
+            <input type="text" name="ptn-chegada" class="input" required>
         </div>
 
         <div>
             <label for="ptn-chegada">Dias que usará o transporte</label>
             <div>
-                <input type="checkbox" name="dias-semana" id="segunda">
+                <input type="checkbox" name="dias-semana" id="segunda" class="input">
                 <label for="segunda">Segunda-feira</label>
                 </input>
             </div>
             <div>
-                <input type="checkbox" name="dias-semana" id="terca">
+                <input type="checkbox" name="dias-semana" id="terca" class="input">
                 <label for="terca">Terça-feira</label>
                 </input>
             </div>
             <div>
-                <input type="checkbox" name="dias-semana" id="quarta">
+                <input type="checkbox" name="dias-semana" id="quarta" class="input">
                 <label for="quarta">Quarta-feira</label>
                 </input>
             </div>
             <div>
-                <input type="checkbox" name="dias-semana" id="quinta">
+                <input type="checkbox" name="dias-semana" id="quinta" class="input">
                 <label for="quinta">Quinta-feira</label>
                 </input>
             </div>
             <div>
-                <input type="checkbox" name="dias-semana" id="sexta">
+                <input type="checkbox" name="dias-semana" id="sexta" class="input">
                 <label for="sexta">Sexta-feira</label>
                 </input>
             </div>

@@ -9,8 +9,8 @@
 <body>
     <header>
         <h2 class="logoDesc">Bussfeed</h2>
+        <p class="paragraph">Cadastro de Ponto.</p>
     </header>
-    <p class="paragraph">Preparando sua viagem?</p>
     <form action="/cadastrar/ponto" method="POST" class="sec">
 
         <div>
@@ -45,5 +45,6 @@
 
         <input type="submit" value="Cadastrar" class=entrar required>
     </form>
+    <img src="../../public/assets/img/stop.png" alt="ponto" class="ponto">
 </body>
 </html>

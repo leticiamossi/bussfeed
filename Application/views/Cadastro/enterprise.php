@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../public/assets/css/style.css">
 </head>
 <body>
-    <form action="/cadastrar/empresa" method="POST">
+    <form action="/cadastrar/empresa" method="POST" class="sec">
         <div>
             <label for="nome">Nome da empresa</label>
             <input type="text" name="nome" required>

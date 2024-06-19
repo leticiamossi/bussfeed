@@ -4,13 +4,40 @@
 * {
   font-family:'Montserrat', sans-serif;
   margin: 0;
-
 }
 
 body {
-  background: #f9f9f9;
+  background: #ffffff;
   min-height: 100vh;
   overflow-x: hidden;
+}
+
+h1 {
+  color:#f45b5b;
+  font-family: 'Montserrat', bold;
+  font-style: italic;
+} 
+
+header {
+  position: absolute;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+form {
+  position: absolute;
+  width: 100%;
+  top: 150px;
+  left: 50px;
+  right: 50px;
+  padding: 50px;
+}
+
+div {
+  display: block;
 }
 
 .logoDesc {
@@ -20,44 +47,30 @@ body {
     pointer-events: none;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 30px 100px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  z-index: 100;
-}
-
-h1 {
-  color:#f45b5b;
-  font-family: 'Montserrat', bold;
-  font-style: italic;
-}
-
-.sec {
-  padding: 100px;
+.paragraph {
+  position: absolute;
+  top: 100px;
 }
 
 .input {
+  width: 100%;
   background-color: rgb(236, 236, 236);
   border-radius: 10cm;
 }
 
 .entrar {
+  display: flex;
+  padding: 5px;
   font-style: italic;
   background-color: rgb(163, 223, 203);
   border: 1px;
   border-radius: 10px;
 }
 
-form {
-  top: 190px;
-  border-radius: 10px;
-  position: fixed;
-  right: 100px;
-  border: 10px;
+.ponto {
+  position: relative;
+  top: 450px;
+  left: 100px;
+  width: 300px;
+  height: 300px;
 }
