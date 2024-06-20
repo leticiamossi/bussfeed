@@ -33,9 +33,56 @@ class Viagem extends Controller
         $this->view('viagem/point');
     }
 
-    public function empresa()
+    public function empresa($id)
     {
-        $this->view('viagem/enterprise');
+        $this->verification();
+        if($this->permission){
+            $conn = $this->model('viagem');
+            $pontos = $conn::listViagemEspecifica($id);
+            $this->view('viagem/enterprise', ['id' => $id, 'pontos' => $pontos]);
+        } else {
+            $this->view('erro404');
+        }
+    }
+
+    public function confirmacao($id)
+    {
+        $this->verification();
+        if($this->permission){
+            $conn = $this->model('viagem');
+            $update = $conn::fecharViagem($id);
+            $veiculos = $conn::listVeiculos($_SESSION['ID']);
+            $motorista = $conn::listMotoristas($_SESSION['ID']);
+
+            if(isset($_POST['veiculo'])){
+                $veic = $_POST['veiculo'];
+                $mot = $_POST['motorista'];
+
+                $insert = $conn::insertVeiculoMotorista($id, $mot, $veic);
+            }
+
+            $qtdPass = $conn::countPassageiros($id);
+            $passageiros = 0;
+            foreach($qtdPass as $passageiro) {
+                $passageiros = $passageiros + $passageiro['qtd'];
+            }
+
+            $veiculosViagem = $conn::countAssentos($id);
+            $lugares = 0;
+            foreach($veiculosViagem as $veiculo) {
+                $lugares = $lugares + $veiculo['qtdLugares_veiculo'];
+            }
+
+            $passageiros = $passageiros - $lugares;
+            if($passageiros <= 0){
+                header('Location: /home/empresa');
+            } else {
+                $this->view('viagem/confirm', ['id' => $id, 'veiculos' => $veiculos, 'motoristas' => $motorista, 'passageiros' => $passageiros, 'veiculosViagem' => $veiculosViagem]);
+            }
+
+        } else {
+            $this->view('erro404');
+        }
     }
 
     public function motorista()
