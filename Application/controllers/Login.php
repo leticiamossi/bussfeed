@@ -31,6 +31,7 @@ class Login extends Controller
                     $empresa = $conn::findEmpresa($email, $senha);
                     foreach($empresa as $aux){
                         $_SESSION['ID'] = $aux['id_empresa'];
+                        $_SESSION['TOKEN'] = $aux['token_empresa'];
                     }
                     header("Location: /home/empresa");
                     break;

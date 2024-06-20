@@ -12,6 +12,7 @@
         <a href="/login/logout" class="input">Sair</a>
     </header>
     <main>
+        <p>Código: <?php echo $_SESSION['TOKEN']?></p>
         <section class="sec">
             <div>
                 <p>Hoje, 
