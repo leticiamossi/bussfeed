@@ -60,13 +60,13 @@
         </section>
         <section class="sec">
             <h3>Cadastros e alterações</h3>
-            <a href="/consulta/veiculo">
+            <a href="/consulta/veiculos">
                 <div>
                     <!--Botão-->
                     <p>Veículo</p>
                 </div>
             </a>
-            <a href="/consulta/motorista">
+            <a href="/consulta/motoristas   ">
                 <div>
                     <!--Botão-->
                     <p>Motorista</p>
