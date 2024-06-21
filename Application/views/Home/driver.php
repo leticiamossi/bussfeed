@@ -9,15 +9,25 @@
 </head>
 
 <body>
-<header>
-    <a href="/login/logout" class="input">Sair</a>
-</header>
+    <header>
+        <a href="/login/logout" class="input">Sair</a>
+    </header>
     <main>
         <section class="sec">
-            <p>Hoje, 15 de maio</p>
-            <p>Veiculo: xxx</p>
-            <p>Quant. passageiros: xx</p>
-            <p>Destino: xxx</p>
+            <p>Hoje,
+                <?php
+                date_default_timezone_set('America/Bahia');
+                echo date("d/m");
+                ?>
+            </p>
+            <?php foreach ($data['viagens'] as $viagem) { ?>
+                <a href="/viagem/motorista/<?php echo $viagem['id_viagem'] ?>">
+                    <div>
+                        <p>Veiculo: <?php echo $viagem['modelo_veiculo'] . " (" . $viagem['placa_veiculo'] . ")" ?></p>
+                        <p>Destino: <?php echo $viagem['destino_viagem'] ?></p>
+                    </div>
+                <?php } ?>
+                </a>
         </section>
         <section>
             <a href="#">

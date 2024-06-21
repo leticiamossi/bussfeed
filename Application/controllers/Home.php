@@ -46,7 +46,15 @@ class Home extends Controller
 
     public function motorista()
     {
-        $this->view('home/driver');
+        $this->verification();
+        if($this->permission){
+            $id = $_SESSION['ID'];
+            $conn = $this->model('home');
+            $viagens = $conn::listViagemMot($id);
+            $this->view('home/driver', ['viagens' => $viagens]);
+        } else {
+            $this->view('erro404');
+        }
     }
 }
 
