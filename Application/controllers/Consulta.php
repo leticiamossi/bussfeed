@@ -39,7 +39,13 @@ class Consulta extends Controller
 
     public function viagemEmpresa()
     {
-        $this->view('consulta/travel-enterprise');
+        $this->verification();
+        if($this->permission){
+            $id = $_SESSION['ID'];
+            $conn = $this->model('consulta');
+            $data = $conn::listViagemEmp($id);
+            $this->view('consulta/viagemempresa', ['viagens' => $data]);
+        }
     }
 
     public function viagemPassageiro()

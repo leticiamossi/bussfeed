@@ -51,7 +51,7 @@
                     <p>Solicitações</p>
                 </div>
             </a>
-            <a href="/consulta/viagens">
+            <a href="/consulta/viagemEmpresa">
                 <div>
                     <!--Botão-->
                     <p>Minhas Viagens</p>
