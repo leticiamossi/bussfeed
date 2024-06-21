@@ -28,7 +28,7 @@ class Home
                                         JOIN tb_veiculosmotoristaviagem AS vmv ON vmv.id_motorista = m.id_motorista
                                         JOIN tb_viagem AS v ON vmv.id_viagem = v.id_viagem
                                         JOIN tb_veiculo AS veic ON vmv.id_veiculo - veic.id_veiculo
-                                        WHERE m.id_motorista = :ID", array(':ID' => $idMot));
+                                        WHERE m.id_motorista = :ID && dataViagem_viagem = CURDATE()", array(':ID' => $idMot));
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 }
