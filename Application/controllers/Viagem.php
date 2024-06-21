@@ -85,9 +85,17 @@ class Viagem extends Controller
         }
     }
 
-    public function motorista()
+    public function pontos($id)
     {
-        $this->view('viagem/driver');
+        $this->verification();
+        if($this->permission){
+            $conn = $this->model('viagem');
+            $info = $conn::listInfo($id);
+            $pontos = $conn::listPontos($id);
+            $this->view('viagem/points', ['id' => $id, 'pontos' => $pontos, 'info' => $info]);
+        } else {
+            $this->view('erro404');
+        }
     }
 
     public function passageiro($id)

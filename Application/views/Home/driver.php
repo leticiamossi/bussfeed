@@ -21,7 +21,7 @@
                 ?>
             </p>
             <?php foreach ($data['viagens'] as $viagem) { ?>
-                <a href="/viagem/motorista/<?php echo $viagem['id_viagem'] ?>">
+                <a href="/viagem/pontos/<?php echo $viagem['id_viagem'] ?>">
                     <div>
                         <p>Veiculo: <?php echo $viagem['modelo_veiculo'] . " (" . $viagem['placa_veiculo'] . ")" ?></p>
                         <p>Destino: <?php echo $viagem['destino_viagem'] ?></p>
