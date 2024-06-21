@@ -28,7 +28,7 @@ date_default_timezone_set('America/Bahia');
             <?php } ?>
         </section>
         <section>
-            <a href="/consulta/viagens">
+            <a href="/consulta/viagemPassageiro">
                 <div>
                     <!--Botão-->
                     <p>Minhas viagens</p>

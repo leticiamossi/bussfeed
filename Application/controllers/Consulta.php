@@ -50,7 +50,13 @@ class Consulta extends Controller
 
     public function viagemPassageiro()
     {
-        $this->view('consulta/travel-passenger');
+        $this->verification();
+        if($this->permission){
+            $id = $_SESSION['ID'];
+            $conn = $this->model('consulta');
+            $data = $conn::listViagemPas($id);
+            $this->view('consulta/viagempassageiro', ['viagens' => $data]);
+        }
     }
 
     public function viagemMotorista()
