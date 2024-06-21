@@ -29,6 +29,8 @@
                 <input class="input" type="password" name="senha">
             </div>
             <input class="entrar" type="submit" value="Entrar">
+            <p class="mini-text">ou</p>
+            <p class="mini-text"><a href="/cadastro/tipo">Registre-se aqui</a></p>
         </form>
     </div>
     </section>

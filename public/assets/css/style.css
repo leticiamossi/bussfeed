@@ -80,7 +80,7 @@ header {
 
 .sec {
   background: #ffffff;
-  padding: 100px;
+  padding: 60px;
 }
 
 .sec h1 {
@@ -92,18 +92,33 @@ header {
   width: 100%;
   background-color: rgb(236, 236, 236);
   border-radius: 10cm;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+}
+
+.mini-text {
+  text-align: center;
+  font-size: .9em;
+  margin: 5px 0;
+}
+
+.mini-text a, .mini-text a:active {
+  color: #f45b5b;
 }
 
 .entrar {
   display: flex;
-  padding: 5px;
+  padding: 5px 25px;
   font-style: italic;
+  font-size: .9em;
   background-color: rgb(163, 223, 203);
   border: 1px;
   border-radius: 10px;
+  margin: 10px auto;
 }
 
 .login {
   display: flex;
   background: #ffffff;
+  margin-top: 50px;
 }
