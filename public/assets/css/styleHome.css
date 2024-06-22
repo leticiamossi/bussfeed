@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    font-family:'Montserrat', sans-serif;
+    background-color: #f1f1f1;
+}
+
+a, a:active {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+header {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f45b5b;
+    padding: 10px 26px;
+    font-family:'Montserrat', sans-serif;
+}
+
+.logo {
+    width: 50px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+}
+
+nav a, nav a:active {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+main {
+    padding: 10px 26px;
+}
+
+.boas-vindas {
+    margin: 30px 0 0 0;
+}
+
+.cod {
+    background: #f45b5b;
+    box-shadow:  inset -2px 3px 1px #a43b3b;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #f1f1f1;
+    font-weight: 500;
+    margin: 0 0 50px 0;
+}
+
+.sec {
+    background-color: rgba(244, 91, 91, .3);
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 5px 10px;
+}
+
+.btn-home {
+    background-size: cover;
+    background-color: #f45b5b;
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: -3px 3px 0px 1px rgb(120, 36, 36);
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn-home p, .btn-home p:active {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-home p {
+    background: rgba(183, 56, 56, .5);
+    box-shadow:  inset -2px 3px 1px rgb(120, 36, 36);
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 0 5px 20px 5px;
+}
+
+footer {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f45b5b;
+    padding: 20px 26px;
+    font-family:'Montserrat', sans-serif;
+}
+
+.logo-ft {
+    width: 70px;
+}
+
+#menu {
+    margin-top: 30px;
+}
+
+footer h4 {
+    color: #f1f1f1;
+    margin: 20px 0 10px 0;
+}
+
+#menu-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    font-weight: 400;
+    color: #f1f1f1;
+}
+
+#menu-footer a {
+    margin: 5px 0;
+}

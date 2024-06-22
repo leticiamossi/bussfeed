@@ -32,6 +32,7 @@ class Login extends Controller
                     foreach($empresa as $aux){
                         $_SESSION['ID'] = $aux['id_empresa'];
                         $_SESSION['TOKEN'] = $aux['token_empresa'];
+                        $_SESSION['EMP'] = $aux['nome_empresa'];
                     }
                     header("Location: /home/empresa");
                     break;
