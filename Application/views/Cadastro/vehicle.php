@@ -11,7 +11,7 @@
     <form action="/cadastrar/veiculo" method="POST">
         <div>
             <label for="modelo">Modelo</label>
-            <select name="modelo" id="modelo" required>
+            <select name="modelo" id="modelo" class="input" required>
                 <option>Ônibus</option>
                 <option>Micro ônibus</option>
                 <option>Van</option>
@@ -20,17 +20,17 @@
 
         <div>
             <label for="placa">Placa</label>
-            <input type="text" name="placa" required>
+            <input type="text" name="placa" class="input" required>
         </div>
 
         <div>
             <label for="marca">Marca</label>
-            <input type="text" name="marca" required>
+            <input type="text" name="marca" class="input" required>
         </div>
 
         <div>
             <label for="situacao">Situação</label>
-            <select name="situacao" id="situacao" required>
+            <select name="situacao" id="situacao" class="input" required>
                 <option>Próprio</option>
                 <option>Alugado</option>
                 <option>Emprestado</option>
@@ -39,19 +39,19 @@
 
         <div>
             <label for="lugares">Quantidade de Lugares</label>
-            <input type="number" name="lugares" required>
+            <input type="number" name="lugares" class="input" required>
         </div>
 
         <div>
             <label for="status">Status</label>
-            <select name="status" id="status" required>
+            <select name="status" id="status" class="input" required>
                 <option>Ativo</option>
                 <option>Inativo</option>
                 <option>Manutenção</option>
             </select>
         </div>
         
-        <input type="submit" value="Cadastrar">
+        <input type="submit" value="Cadastrar" class="entrar">
     </form>
 </body>
 <?php require './Application/views/headers/footerEmp.php'?>
