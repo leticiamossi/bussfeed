@@ -52,6 +52,7 @@ class Login extends Controller
                     $motorista = $conn::findMotorista($email, $senha);
                     foreach($motorista as $aux){
                         $_SESSION['ID'] = $aux['id_motorista'];
+                        $_SESSION['NOME'] = $aux['nome_motorista'];
                     }
                     header("Location: /home/motorista");
                     break;
