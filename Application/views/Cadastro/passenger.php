@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="../../public/assets/css/stylePassageiro.css">
 </head>
 <body>
-    <header>
-        <h2 class="logoDesc">Bussfeed</h2>
-    </header>
+    <?php require './Application/views/headers/headerPas.php'?>
     <form action="/cadastrar/passageiro" method="POST" class="sec">
         <div>
             <label for="nome">Nome</label>
@@ -92,6 +90,6 @@
         
         <input type="submit" value="Cadastrar" class="entrar">
     </form>
-    <img src="../../public/assets/img/person4.png" alt="passageiro" class="passageiro">
 </body>
+<?php require './Application/views/headers/footerPas.php'?>
 </html>

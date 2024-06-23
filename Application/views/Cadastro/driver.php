@@ -7,25 +7,26 @@
     <link rel="stylesheet" href="../../public/assets/css/styleMotorista.css">
 </head>
 <body>
+    <?php require './Application/views/headers/headerEmp.php'?>
     <form action="/cadastrar/motorista" method="POST">
         <div>
             <label for="nome">Nome</label>
-            <input type="text" name="nome" required>
+            <input type="text" name="nome" class="input" required>
         </div>
 
         <div>
             <label for="cpf">CPF</label>
-            <input type="text" name="cpf" required>
+            <input type="text" name="cpf" class="input" required>
         </div>
 
         <div>
             <label for="telefone">Telefone</label>
-            <input type="text" name="telefone" required>
+            <input type="text" name="telefone" class="input" required>
         </div>
 
         <div>
             <label for="cnh">CNH</label>
-            <input type="text" name="cnh" required>
+            <input type="text" name="cnh" class="input" required>
         </div>
 
         <div>
@@ -54,22 +55,22 @@
 
         <div>
             <label for="email">E-mail</label>
-            <input type="email" name="email" required>
+            <input type="email" name="email" class="input" required>
         </div>
 
         <!--VALIDAR-->
         <div>
             <label for="senha">Senha</label>
-            <input type="password" name="senha" required>
+            <input type="password" name="senha" class="input" required>
         </div>
 
         <div>
             <label for="connfirm-senha">Confirme a Senha</label>
-            <input type="password" name="confirm-senha" required>
+            <input type="password" name="confirm-senha" class="input" required>
         </div>
         
-        <input type="submit" value="Cadastrar">
+        <input type="submit" value="Cadastrar" class="entrar">
     </form>
-    <img src="../../public/assets/img/person4.png" alt="passageiro" class="passageiro">
 </body>
+<?php require './Application/views/headers/footerEmp.php'?>
 </html>

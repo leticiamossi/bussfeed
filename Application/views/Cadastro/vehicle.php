@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BussFeed | Cadastro de Veículo</title>
-    <link rel="stylesheet" href="../../public/assets/css/style.css">
+    <link rel="stylesheet" href="../../public/assets/css/styleVeiculo.css">
 </head>
 <body>
+<?php require './Application/views/headers/headerEmp.php'?>
     <form action="/cadastrar/veiculo" method="POST">
         <div>
             <label for="modelo">Modelo</label>
@@ -53,4 +54,5 @@
         <input type="submit" value="Cadastrar">
     </form>
 </body>
+<?php require './Application/views/headers/footerEmp.php'?>
 </html>
