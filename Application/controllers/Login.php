@@ -41,6 +41,7 @@ class Login extends Controller
                     $empresa = $conn::findEmpresaPassageiro($email, $senha);
                     foreach($passageiro as $aux){
                         $_SESSION['ID'] = $aux['id_aluno'];
+                        $_SESSION['NOME'] = $aux['nome_aluno'];
                     }
                     foreach($empresa as $auxi){
                         $_SESSION['ID_EMP'] = $auxi['empresa_id'];
