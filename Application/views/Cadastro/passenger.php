@@ -92,5 +92,6 @@
         
         <input type="submit" value="Cadastrar" class="entrar">
     </form>
+    <img src="../../public/assets/img/person4.png" alt="passageiro" class="passageiro">
 </body>
 </html>
