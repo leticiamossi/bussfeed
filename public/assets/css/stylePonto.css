@@ -29,9 +29,8 @@ header {
 
 form {
   position: absolute;
-  width: 100%;
-  top: 150px;
-  left: 50px;
+  width: 50%;
+  top: 130px;
   right: 50px;
   padding: 50px;
 }
@@ -59,6 +58,8 @@ div {
 }
 
 .entrar {
+  position: absolute;
+  top: 310px;
   display: flex;
   padding: 5px;
   font-style: italic;
@@ -69,8 +70,8 @@ div {
 
 .ponto {
   position: relative;
-  top: 450px;
-  left: 100px;
-  width: 300px;
-  height: 300px;
+  top: 480px;
+  left: 50px;
+  width: 270px;
+  height: 270px;
 }

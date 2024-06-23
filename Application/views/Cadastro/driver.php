@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BussFeed | Cadastro de Motorista</title>
-    <link rel="stylesheet" href="../../public/assets/css/style.css">
+    <link rel="stylesheet" href="../../public/assets/css/styleMotorista.css">
 </head>
 <body>
     <form action="/cadastrar/motorista" method="POST">
@@ -70,5 +70,6 @@
         
         <input type="submit" value="Cadastrar">
     </form>
+    <img src="../../public/assets/img/person4.png" alt="passageiro" class="passageiro">
 </body>
 </html>
