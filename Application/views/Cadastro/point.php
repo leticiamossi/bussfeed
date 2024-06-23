@@ -7,11 +7,8 @@
     <link rel="stylesheet" href="../../public/assets/css/stylePonto.css">
 </head>
 <body>
-    <header>
-        <h2 class="logoDesc">Bussfeed</h2>
-        <p class="paragraph">Cadastro de Ponto.</p>
-    </header>
-    <form action="/cadastrar/ponto" method="POST" class="sec">
+<?php require './Application/views/headers/headerPas.php'?>
+    <form action="/cadastrar/ponto" method="POST">
 
         <div>
             <label for="apelido">Apelido</label>
@@ -45,6 +42,6 @@
 
         <input type="submit" value="Cadastrar" class=entrar required>
     </form>
-    <img src="../../public/assets/img/stop.png" alt="ponto" class="ponto">
 </body>
+<?php require './Application/views/headers/footerPas.php'?>
 </html>
