@@ -12,7 +12,7 @@ date_default_timezone_set('America/Bahia');
 </head>
 
 <body>
-    <?php require './Application/views/headers/headerEmp.php'?>
+    <?php require './Application/views/headers/headerPas.php'?>
     <main>
         <div>
             <h3 class="boas-vindas">Olá, <?php echo $_SESSION['NOME']?></h3>
@@ -46,7 +46,7 @@ date_default_timezone_set('America/Bahia');
             </a>
         </section>
     </main>
-    <?php require './Application/views/headers/footerEmp.php'?>
+    <?php require './Application/views/headers/footerPas.php'?>
 </body>
 
 </html>

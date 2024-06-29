@@ -10,6 +10,10 @@ body {
   background: #ffffff;
 }
 
+main {
+  height: 300px;
+}
+
 form {
   top: 45px;
   width: 95%;
