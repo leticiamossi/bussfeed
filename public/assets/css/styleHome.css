@@ -130,3 +130,24 @@ footer h4 {
 #menu-footer a {
     margin: 5px 0;
 }
+
+.formCriar {
+    padding: 20px;
+    height: 230px;
+}
+
+.input {
+    width: 95%;
+    padding: 5px;
+    background-color: rgb(236, 236, 236);
+    border-radius: 10cm;
+  }  
+
+  .entrar {
+    display: flex;
+    padding: 10px;
+    font-style: italic;
+    background-color: rgb(163, 223, 203);
+    border: 1px;
+    border-radius: 10px;
+  }
