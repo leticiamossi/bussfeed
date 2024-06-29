@@ -10,7 +10,7 @@
 <body>
     <?php require './Application/views/headers/headerPas.php'?>
     <header>
-        <a href="/login/logout">Sair</a>
+        <br>
     </header>
     <main>
        <h3>Minhas Solicitações</h3>
