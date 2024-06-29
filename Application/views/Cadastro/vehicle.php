@@ -8,7 +8,7 @@
 </head>
 <body>
 <?php require './Application/views/headers/headerEmp.php'?>
-    <form action="/cadastrar/veiculo" method="POST">
+    <form action="/cadastrar/veiculo" method="POST" class="cadastroVeiculo">
         <div>
             <label for="modelo">Modelo</label>
             <select name="modelo" id="modelo" class="input" required>
@@ -54,5 +54,6 @@
         <input type="submit" value="Cadastrar" class="entrar">
     </form>
 </body>
+<img src="\public\assets\img\bus1.png" alt="Onibus" class="Onibus"><br>
 <?php require './Application/views/headers/footerEmp.php'?>
 </html>
