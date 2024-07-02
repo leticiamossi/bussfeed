@@ -10,13 +10,10 @@ body {
   background: #ffffff;
 }
 
-form {
-  top: 45px;
-  left: 10px;
-  right: 10px;
+.pontodiv {
   position: relative;
-  width: 88%;
-  height: 394px;
+  border-radius: 10px;
+  width: 100%;
 }
 
 .input {
@@ -32,4 +29,11 @@ form {
   background-color: rgb(163, 223, 203);
   border: 1px;
   border-radius: 10px;
+}
+
+.ponto {
+  top: 100px;
+  left: 30px;
+  width: 300px;
+  height: 300px;
 }

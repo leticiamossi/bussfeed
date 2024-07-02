@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BussFeed | Pontos</title>
-    <link rel="stylesheet" href="../../public/assets/css/style.css">
+    <link rel="stylesheet" href="../../public/assets/css/stylePonto.css">
 </head>
 
 <body>
+<?php require './Application/views/headers/headerEmp.php'?>
     <header></header>
     <main>
         <h3>Meus Pontos</h3>
-        <section>
+        <section class="pontodiv">
             <?php foreach($data['pontos'] as $ponto){?>
             <div>
                 <div>
@@ -43,8 +44,10 @@
                 <?php } ?>
             </div>
         </section>
-        <a href="/cadastro/ponto"><button>Cadastrar novo ponto</button></a>
+        <a href="/cadastro/ponto"><button class="input">Cadastrar novo ponto</button></a>
     </main>
+    <img src="\public\assets\img\person1.png" alt="motorista" class="ponto"><br>
+<?php require './Application/views/headers/footerEmp.php'?>
 </body>
 
 </html>
