@@ -1,4 +1,5 @@
 <?php
+// Arquivo de select no banco para as consultas
 
 namespace Application\models;
 
@@ -7,6 +8,7 @@ use PDO;
 
 class Consulta 
 {
+    // Lista todos os pontos da empresa
     public static function listPontos(string $id)
     {
         $conn = new Database();
@@ -14,6 +16,7 @@ class Consulta
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Lista os motoristas da empresa
     public static function listMotoristas(string $id)
     {
         $conn = new Database();
@@ -21,6 +24,7 @@ class Consulta
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Lista os veiculos da empresa
     public static function listVeiculos(string $id)
     {
         $conn = new Database();
@@ -28,6 +32,7 @@ class Consulta
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Lista as viagens da empresa
     public static function listViagemEmp(string $id)
     {
         $conn = new Database();
@@ -40,6 +45,7 @@ class Consulta
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Lista as viagens do passageiro
     public static function listViagemPas(string $id)
     {
         $conn = new Database();

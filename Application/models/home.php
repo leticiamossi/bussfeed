@@ -1,4 +1,5 @@
 <?php
+// Arquivo de select para as páginas home
 
 namespace Application\models;
 
@@ -7,6 +8,7 @@ use PDO;
 
 class Home 
 {
+    // Lista as viagens do dia para a empresa
     public static function listViagens(string $idEmpresa)
     {
         $conn = new Database();
@@ -14,6 +16,7 @@ class Home
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Lista as viagens confirmadas do aluno
     public static function listViagensConfirm(string $idAluno)
     {
         $conn = new Database();
@@ -21,6 +24,7 @@ class Home
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Lista as viagens do motorista do dia
     public static function listViagemMot(string $idMot)
     {
         $conn = new Database();

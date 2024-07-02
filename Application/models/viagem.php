@@ -1,5 +1,5 @@
 <?php
-
+// Arquivo de insert e select relacionada as viagens
 namespace Application\models;
 
 use Application\core\Database;
@@ -7,6 +7,7 @@ use PDO;
 
 class Viagem
 {
+    // Insere a viagem criada pela empresa
     public static function insertCriacaoViagem(string $destino, string $data, string $id)
     {
         $conn = new Database();
@@ -15,6 +16,7 @@ class Viagem
         $result->rowCount();
     }
 
+    // Insere a confirmacao da viagem do passageiro
     public static function confirmarViagem(string $viagem, string $aluno, string $ponto)
     {
         $conn = new Database();
@@ -23,6 +25,7 @@ class Viagem
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Consulta uma viagem especifica
     public static function listViagemEspecifica(string $id)
     {
         $conn = new Database();
@@ -33,6 +36,7 @@ class Viagem
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Insere zero no status da viagem (fecha a viagem)
     public static function fecharViagem(string $id)
     {
         $conn = new Database;
@@ -40,6 +44,7 @@ class Viagem
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Lista os veiculos da empresa
     public static function listVeiculos(string $id)
     {
         $conn = new Database();
@@ -47,6 +52,7 @@ class Viagem
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Lista os motoristas da empresa
     public static function listMotoristas(string $id)
     {
         $conn = new Database();
@@ -54,6 +60,7 @@ class Viagem
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Conta os passageiros confirmados
     public static function countPassageiros(string $id)
     {
         $conn = new Database();
@@ -61,6 +68,7 @@ class Viagem
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Conta os assentos disponíveis 
     public static function countAssentos(string $id)
     {
         $conn = new Database();
@@ -70,6 +78,7 @@ class Viagem
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Insere o veiculo e motorista na viagem
     public static function insertVeiculoMotorista(string $id, string $motorista, string $veiculo)
     {
         $conn = new Database();
@@ -78,6 +87,7 @@ class Viagem
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Lista os pontos
     public static function listPontos(string $id)
     {
         $conn = new Database();
@@ -89,6 +99,7 @@ class Viagem
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Lista as infomações da viagem
     public static function listInfo(string $id)
     {
         $conn = new Database();

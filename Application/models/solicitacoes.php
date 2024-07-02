@@ -1,4 +1,5 @@
 <?php
+// Arquivo de select e insert para as solicitacoes
 
 namespace Application\models;
 
@@ -7,6 +8,7 @@ use PDO;
 
 class Solicitacoes
 {
+    // Lista as solicitações pendentes
     public static function listSolicitacoes(string $id)
     {
         $conn = new Database();
@@ -14,6 +16,7 @@ class Solicitacoes
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Insere a resposta da empresa
     public static function insertResposta(string $id, string $resposta)
     {
         $conn = new Database();

@@ -1,4 +1,5 @@
 <?php
+// Arquivo de insert dos cadastros 
 
 namespace Application\models;
 
@@ -7,6 +8,7 @@ use PDO;
 
 class Cadastrar 
 {
+    // Insere o usuario
     public static function insertUsuario(string $email, string $senha, string $nivel)
     {
         $conn = new Database();
@@ -15,6 +17,7 @@ class Cadastrar
         return $result->rowCount();
     }
 
+    // Insere a empresa
     public static function insertEmpresa(string $nome, string $resp, string $cnpj, string $email, string $senha, string $tel, string $token, string $validade) 
     {
         $conn = new Database();
@@ -23,6 +26,7 @@ class Cadastrar
         return $result->rowCount();
     }
 
+    // Insere o motorista
     public static function insertMotorista(string $id, string  $nome, string $email, string $senha, string $cpf, string $cnh, string $cat, string $tel)
     {
         $conn = new Database();
@@ -31,6 +35,7 @@ class Cadastrar
         return $result->rowCount();
     }
 
+    // Insere o passageiro
     public static function insertPassageiro(string $nome, string $cpf, string $tel, string $email, string $senha, string $instituicao, string $ano)
     {
         $conn = new Database();
@@ -40,6 +45,7 @@ class Cadastrar
         return $select->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Insere o endereço
     public static function insertEndereco(string $rua, string $num, string $bairro, string $cidade, string $estado, string $cep, string $idAluno)
     {
         $conn = new Database();
@@ -48,6 +54,7 @@ class Cadastrar
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Insere a solicitacao
     public static function insertSolicitacao(string $codigo, string $aluno, string $solicitacao, string $expiracao)
     {
         $conn = new Database();
@@ -56,6 +63,7 @@ class Cadastrar
         return $result->rowCount();
     }
 
+    // Insere o veiculo
     public static function insertVeiculo(string $empresa, string $modelo, string $placa, string $marca, string $situacao, string $lugares, string $status)
     {
         $conn = new Database();
@@ -64,6 +72,7 @@ class Cadastrar
         return $result->rowCount();
     }
 
+    // Insere o ponto
     public static function insertPonto(string $id, string $apelido, string $rua, string $bairro, string $cidade, string $ponto, string $hora)
     {
         $conn = new Database();

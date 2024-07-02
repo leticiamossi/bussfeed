@@ -1,13 +1,14 @@
 <?php
+// Arquivo de select para o sistema de login
 
 namespace Application\models;
 
 use Application\core\Database;
-use Application\models;
 use PDO;
 
 class Login
 {
+    // Consulta o nivel de acesso
     public static function findNivelUser(string $email, string $senha)
     {
         $conn = new Database();
@@ -16,6 +17,7 @@ class Login
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Consulta as informações da empresa
     public static function findEmpresa(string $email, string $senha)
     {
         $conn = new Database();
@@ -24,6 +26,7 @@ class Login
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Consulta as informações do passageiro
     public static function findPassageiro(string $email, string $senha)
     {
         $conn = new Database();
@@ -32,6 +35,7 @@ class Login
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Consulta a empresa relacionada ao passageiro
     public static function findEmpresaPassageiro(string $email, string $senha)
     {
         $conn = new Database();
@@ -40,6 +44,7 @@ class Login
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // COnsulta as informações do motorista
     public static function findMotorista(string $email, string $senha)
     {
         $conn = new Database();
