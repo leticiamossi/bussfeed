@@ -1,9 +1,11 @@
 <?php
+// Arquivo responsável por realizar os cadastros e chamar os inserts do model cadastrar.php
 
 use Application\core\Controller;
 
 class Cadastrar extends Controller
 {
+    // Cadastro da empresa
     public function empresa()
     {
         $nome = $_POST['nome'];
@@ -12,8 +14,11 @@ class Cadastrar extends Controller
         $email = $_POST['email'];
         $senha = $_POST['senha'];
         $telefone = $_POST['telefone'];
+
+        //Valido até o fim do ano em que foi realizado o cadastro
         $validade = date('Y') . "-12-31";
 
+        //Cria um token aleatório para a empresa
         $token = bin2hex(random_bytes(10));
 
         $conn = $this->model('cadastrar');
@@ -28,6 +33,7 @@ class Cadastrar extends Controller
         }
     }
 
+    // Cadastro do motorista
     public function motorista()
     {
         $id = $_SESSION['ID'];
@@ -69,6 +75,7 @@ class Cadastrar extends Controller
         }
     }
 
+    // Cadastro do passageiro
     public function passageiro()
     {
         $nome = $_POST['nome'];
@@ -95,6 +102,7 @@ class Cadastrar extends Controller
         }
         $insertEnd = $conn::insertEndereco($rua, $numero, $bairro, $cidade, $estado, $cep, $idAluno);
 
+        // Valido por semestre
         $solicitacao = date('Y-m-d');
         if (date('m') >= 6) {
             $expiracao = date('Y') . "-12-31";
@@ -110,6 +118,7 @@ class Cadastrar extends Controller
         }
     }
 
+    // Cadastro do veiculo
     public function veiculo()
     {
         $empresa = $_SESSION['ID'];
@@ -130,6 +139,7 @@ class Cadastrar extends Controller
         }
     }
 
+    // Cadastro dos pontos
     public function ponto()
     {
         $empresa = $_SESSION['ID'];

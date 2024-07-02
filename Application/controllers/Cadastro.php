@@ -1,4 +1,5 @@
 <?php
+// Encaminha o usuário para as páginas de cadastro
 
 use Application\core\Controller;
 

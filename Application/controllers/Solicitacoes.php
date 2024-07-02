@@ -1,9 +1,11 @@
 <?php
+// Arquivo responsável por controlar a página de solicitacoes 
 
 use Application\core\Controller;
 
 class Solicitacoes extends Controller
 {
+    // Consulta pedidos não respondidos
     public function index()
     {
         $this->verification();
@@ -17,6 +19,7 @@ class Solicitacoes extends Controller
         }
     }
 
+    // Chama o insert da resposta
     public function resposta($id, $resposta)
     {
         $this->verification();

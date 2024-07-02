@@ -1,9 +1,11 @@
 <?php
+// Arquivo responsavel por chamar consultas no model home.php e envia as informações para a página home
 
 use Application\core\Controller;
 
 class Home extends Controller
 {
+    // Encaminha as informações e o usuário para a home da empresa
     public function empresa()
     {
         $this->verification();
@@ -17,6 +19,7 @@ class Home extends Controller
         }
     }
 
+    // Encaminha as informações e o usuário para a home do passageiro
     public function passageiro()
     {
         $this->verification();
@@ -44,6 +47,7 @@ class Home extends Controller
         }
     }
 
+    // Encaminha as informações e o usuário para a home do motorista
     public function motorista()
     {
         $this->verification();

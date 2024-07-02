@@ -1,4 +1,5 @@
 <?php
+// Arquivo responsável por consultar o nivel de acesso, as devidas informações e encaminhar para as páginas certas
 
 use Application\core\Controller;
 
@@ -10,8 +11,10 @@ class Login extends Controller
         $this->view('login/index');
     }
 
+    // Realiza o login
     public function login()
     {
+        //recebe as informações
         $email = $_POST['email'];
         $senha = $_POST['senha'];
 
@@ -21,10 +24,14 @@ class Login extends Controller
         if(!empty($data))
         {
             session_start();
+            // consulta o nivel de acesso
             foreach($data as $user){
                 $_SESSION['nivel'] = $user['nivel_usuario'];
             }
             
+            // 1 - Empresa
+            // 2 - Passageiro
+            // 3 - Motorista
             switch($_SESSION['nivel'])
             {
                 case 1:
@@ -63,6 +70,7 @@ class Login extends Controller
 
     }
 
+    // Realiza o logout da conta e encerra a sessão
     public function logout()
     {
         $this->verification();

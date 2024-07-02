@@ -1,9 +1,10 @@
 <?php
-
+// Arquivo responsável por chamar os select no model consulta.php e enviar as informações para a página
 use Application\core\Controller;
 
 class Consulta extends Controller
 {
+    // Consulta os motoristas
     public function motoristas()
     {
         $this->verification();
@@ -15,6 +16,7 @@ class Consulta extends Controller
         }
     }
 
+    // Consulta os pontos
     public function ponto()
     {
         $this->verification();
@@ -26,6 +28,7 @@ class Consulta extends Controller
         }
     }
 
+    // Consulta os veiculos
     public function veiculos()
     {
         $this->verification();
@@ -37,6 +40,7 @@ class Consulta extends Controller
         }
     }
 
+    // Consulta as viagens realizadas pela empresa
     public function viagemEmpresa()
     {
         $this->verification();
@@ -48,6 +52,7 @@ class Consulta extends Controller
         }
     }
 
+    // Consulta as viagens realizadas pelo passageiro
     public function viagemPassageiro()
     {
         $this->verification();
@@ -59,6 +64,7 @@ class Consulta extends Controller
         }
     }
 
+    // Consulta as viagens realizadas pelo motorista
     public function viagemMotorista()
     {
         $this->view('consulta/travel-driver');

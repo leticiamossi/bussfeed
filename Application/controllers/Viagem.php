@@ -1,10 +1,11 @@
 <?php
+// Arquivo responsável por controlar as informações referente a viagem
 
 use Application\core\Controller;
-use Application\core\Database;
 
 class Viagem extends Controller
 {
+    // Encaminha para a pagina de criar a viagem
     public function criar()
     {
         $this->verification();
@@ -13,6 +14,7 @@ class Viagem extends Controller
         }
     }
 
+    // Cria a viagem 
     public function criada()
     {
         $this->verification();
@@ -28,11 +30,7 @@ class Viagem extends Controller
         }
     }
 
-    public function ponto()
-    {
-        $this->view('viagem/point');
-    }
-
+    // Encaminha as informações referente a viagem para a página de fechar a viagem  
     public function empresa($id)
     {
         $this->verification();
@@ -45,6 +43,7 @@ class Viagem extends Controller
         }
     }
 
+    // Página de escolha de veiculo e motorista
     public function confirmacao($id)
     {
         $this->verification();
@@ -54,6 +53,7 @@ class Viagem extends Controller
             $veiculos = $conn::listVeiculos($_SESSION['ID']);
             $motorista = $conn::listMotoristas($_SESSION['ID']);
 
+            //Lista os veiculos e motoristas disponiveis
             if(isset($_POST['veiculo'])){
                 $veic = $_POST['veiculo'];
                 $mot = $_POST['motorista'];
@@ -61,18 +61,21 @@ class Viagem extends Controller
                 $insert = $conn::insertVeiculoMotorista($id, $mot, $veic);
             }
 
+            // Conta quatos passageiro confirmaram a viagem
             $qtdPass = $conn::countPassageiros($id);
             $passageiros = 0;
             foreach($qtdPass as $passageiro) {
                 $passageiros = $passageiros + $passageiro['qtd'];
             }
 
+            // Conta quantos assentos tem disponivel
             $veiculosViagem = $conn::countAssentos($id);
             $lugares = 0;
             foreach($veiculosViagem as $veiculo) {
                 $lugares = $lugares + $veiculo['qtdLugares_veiculo'];
             }
 
+           // Caso ainda haja passageiros sem assentos, retorna para esta página para escolher mais um veiculo 
             $passageiros = $passageiros - $lugares;
             if($passageiros <= 0){
                 header('Location: /home/empresa');
@@ -85,6 +88,7 @@ class Viagem extends Controller
         }
     }
 
+    // Lista os pontos necessários para o dia
     public function pontos($id)
     {
         $this->verification();
@@ -98,6 +102,7 @@ class Viagem extends Controller
         }
     }
 
+    // Página para o passageiro escolher o seu ponto
     public function passageiro($id)
     {
         $this->verification();

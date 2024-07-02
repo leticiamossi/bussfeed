@@ -1,4 +1,5 @@
 <?php
+// Confirma a viagem do passageiro
 
 use Application\core\Controller;
 
@@ -9,7 +10,6 @@ class Confirmar extends Controller
         $this->verification();
         if($this->permission){
             $ponto = $_POST['ponto'];
-            echo $ponto;
             $conn = $this->model('viagem');
             $insert = $conn::confirmarViagem($id, $_SESSION['ID'], $ponto);
             header('Location: /home/passageiro');
