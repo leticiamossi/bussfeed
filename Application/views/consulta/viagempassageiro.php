@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header></header>
+<?php require './Application/views/headers/headerPas.php'?>
     <main>
         <h3>Minhas Viagens</h3>
         <section>
@@ -29,6 +29,7 @@
             </div>
         </section>
     </main>
+    <?php require './Application/views/headers/footerPas.php'?>
 </body>
 
 </html>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../public/assets/css/style.css">
 </head>
 <body>
+    <?php require './Application/views/headers/headerEmp.php'?>
     <header>
         </a href="/login/logout">Sair</a>
     </header>
@@ -25,5 +26,6 @@
         ?>
         <a href="/viagem/confirmacao/<?php echo $data['id'] ?>"><button>Fechar Viagem</button></a>
     </main>
+    <?php require './Application/views/headers/footerEmp.php'?>
 </body>
 </html>
