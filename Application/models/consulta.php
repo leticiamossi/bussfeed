@@ -41,7 +41,7 @@ class Consulta
                                     JOIN tb_veiculo AS veic ON vmv.id_veiculo = veic.id_veiculo
                                     JOIN tb_motorista AS m ON vmv.id_motorista = m.id_motorista
                                     WHERE v.empresa_id = :ID && v.status_viagem = '0'
-                                    ORDER BY v.dataViagem_viagem", array(':ID' => $id));
+                                    ORDER BY v.dataViagem_viagem DESC", array(':ID' => $id));
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
@@ -55,7 +55,7 @@ class Consulta
                                     JOIN tb_motorista AS m ON vmv.id_motorista = m.id_motorista
                                     JOIN tb_pontoesperaaluno AS pea ON pea.idviagem = v.id_viagem
                                     WHERE pea.idaluno = :ID && v.status_viagem = '0'
-                                    ORDER BY v.dataViagem_viagem", array(':ID' => $id));
+                                    ORDER BY v.dataViagem_viagem DESC", array(':ID' => $id));
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 }
