@@ -21,6 +21,7 @@ body {
   top: 30px;
   left: 50px;
   width: 70%;
+  height: 380px;
 }
 
 .cadastroMotorista {
@@ -67,10 +68,10 @@ body {
 
 .Onibus {
   position: relative;
-  top: 100px;
-  left: 30px;
-  width: 300px;
-  height: 300px;
+  top: 40px;
+  left: 100px;
+  width: 250px;
+  height: 150px;
 }
 
 .image {
