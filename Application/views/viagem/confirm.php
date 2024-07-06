@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BussFeed</title>
+    <link rel="stylesheet" href="public\assets\css\styleHome.css">
 </head>
 <body>
+<?php require './Application/views/headers/headerPas.php'?>
     <header>
         <a href="/login/logout">Sair</a>
     </header>
@@ -36,5 +38,6 @@
         <input type="submit" value="Confirmar">
         </form>
     </main>
+    <?php require './Application/views/headers/footerPas.php'?>
 </body>
 </html>

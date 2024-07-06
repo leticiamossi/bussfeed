@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<?php require './Application/views/headers/headerEmp.php'?>
     <header></header>
     <main>
         <h3>Minhas Viagens</h3>
@@ -41,6 +42,7 @@
             </div>
         </section>
     </main>
+    <?php require './Application/views/headers/footerEmp.php'?>
 </body>
 
 </html>

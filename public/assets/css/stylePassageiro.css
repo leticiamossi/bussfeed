@@ -10,15 +10,6 @@ body {
   background: #ffffff;
 }
 
-main {
-  height: 300px;
-}
-
-form {
-  top: 45px;
-  width: 95%;
-}
-
 .input {
   width: 95%;
   background-color: rgb(236, 236, 236);
