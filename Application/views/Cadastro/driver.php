@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php require './Application/views/headers/headerEmp.php'?>
-    <form action="/cadastrar/motorista" method="POST">
+    <form action="/cadastrar/motorista" method="POST" class="motoraCadastro">
         <div>
             <label for="nome">Nome</label>
             <input type="text" name="nome" class="input" required>

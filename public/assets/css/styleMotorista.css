@@ -9,31 +9,15 @@
 body {
   background: #ffffff;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
-header {
-  position: absolute;
+.cadastroMotorista {
+  position: relative;
+  text-align: center;
   width: 100%;
-  padding: 30px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-form {
-  position: absolute;
-  width: 50%;
-  top: 130px;
-  right: 50px;
-  padding: 50px;
-}
-
-.logoDesc {
-    font-size: 4em;
-    font-weight: 700;
-    color: #f45b5b;
-    pointer-events: none;
+  background-color: rgb(243, 213, 225);
+  border: 1px;
+  border-radius: 10px;
 }
 
 .input {
@@ -43,8 +27,7 @@ form {
 }
 
 .entrar {
-  position: absolute;
-  top: 310px;
+  position: relative;
   display: flex;
   padding: 5px;
   font-style: italic;
@@ -53,10 +36,7 @@ form {
   border-radius: 10px;
 }
 
-.passageiro {
-  position: relative;
-  top: 480px;
-  left: 50px;
-  width: 270px;
-  height: 270px;
+.image {
+  width: 300px;
+  height: 300px;
 }

@@ -29,53 +29,11 @@ body {
   border-radius: 10px;
 }
 
-.titleMotorista {
-  position: absolute;
-}
-
-.cadastroVeiculo {
+main {
   height: 280px;
   position: relative;
   top: 30px;
   left: 50px;
   width: 70%;
   height: 380px;
-}
-
-.veiculos {
-  position: relative;
-  left: 20px;  
-  height: 250px;
-  width: 80%;
-  padding: 20px;
-}
-
-.motoristas {
-  position: relative;
-  left: 20px;  
-  height: 250px;
-  width: 80%;
-  padding: 20px;
-}
-
-.cadastroMotorista {
-  position: relative;
-  height: 55px;
-  top: 30px;
-  left: 50px;
-  width: 70%;
-}
-
-.image {
-  position: relative;
-  width: 300px;
-  height: 300px;
-}
-
-.Onibus {
-  position: relative;
-  top: 40px;
-  left: 100px;
-  width: 250px;
-  height: 150px;
 }

@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BussFeed | Motoristas</title>
-    <link rel="stylesheet" href="../../public/assets/css/styleVeiculo.css">
+    <link rel="stylesheet" href="../../public/assets/css/styleMotorista.css">
 </head>
 <body>
 <?php require './Application/views/headers/headerEmp.php'?>
     <main>
-        <h3 class="titleMotorista">Meus Motoristas</h3>
+        <h3>Meus Motoristas</h3>
         <section class="cadastroMotorista">
             <?php foreach($data['motoristas'] as $motorista){?>
             <div>
@@ -35,9 +35,11 @@
                         <p><?php echo $motorista['categoriaCnh_motorista']?></p>
                     </div>
                 </div>
+                <br>
                 <?php } ?>
             </div>
         </section>
+        <br>
         <a href="/cadastro/motorista"><button class="input">Cadastrar novo motorista</button></a>
     </main>
     <img src="\public\assets\img\person2.png" alt="motorista" class="image"><br>
