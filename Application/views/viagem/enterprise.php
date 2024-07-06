@@ -12,11 +12,11 @@
         </a href="/login/logout">Sair</a>
     </header>
     <main>
-        <h2>Viagem para <?php echo $data['pontos']['0']['destino_viagem'] ?></h2>
+        <h2>Viagem para <?php echo $data['destino']['0']['destino_viagem'] ?></h2>
         <h4>Pontos:</h4>
         <?php
         foreach($data['pontos'] as $ponto){
-        ?>
+            ?>
         <div>
             <p><?php echo $ponto['apelido_pontoEspera'] ?></p>
             <p>Qnt: <?php echo $ponto['qtn_pontoEspera'] ?></p>

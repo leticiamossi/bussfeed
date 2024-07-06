@@ -37,7 +37,8 @@ class Viagem extends Controller
         if($this->permission){
             $conn = $this->model('viagem');
             $pontos = $conn::listViagemEspecifica($id);
-            $this->view('viagem/enterprise', ['id' => $id, 'pontos' => $pontos]);
+            $destino = $conn::listDestinoViagemEspecifica($id);
+            $this->view('viagem/enterprise', ['id' => $id, 'pontos' => $pontos, 'destino' => $destino]);
         } else {
             $this->view('erro404');
         }

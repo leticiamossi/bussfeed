@@ -29,10 +29,19 @@ class Viagem
     public static function listViagemEspecifica(string $id)
     {
         $conn = new Database();
-        $result = $conn->executeQuery("SELECT pe.apelido_pontoEspera, COUNT(pe.apelido_pontoEspera) AS qtn_pontoEspera, v.destino_viagem FROM tb_pontoesperaaluno AS pea JOIN tb_aluno AS a ON pea.idaluno = a.id_aluno
+        $result = $conn->executeQuery("SELECT pe.apelido_pontoEspera, COUNT(pe.apelido_pontoEspera) AS qtn_pontoEspera FROM tb_pontoesperaaluno AS pea JOIN tb_aluno AS a ON pea.idaluno = a.id_aluno
                                         JOIN tb_pontoespera AS pe ON pea.idpontoespera = pe.id_pontoEspera 
                                         JOIN tb_viagem AS v ON v.id_viagem = pea.idviagem
                                         WHERE pea.idviagem = :ID GROUP BY pe.apelido_pontoEspera", array(':ID' => $id));
+        return $result->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    // Consulta destino viagem especifica
+    public static function listDestinoViagemEspecifica(string $id)
+    {
+        $conn = new Database();
+        $result = $conn->executeQuery("SELECT destino_viagem FROM tb_viagem 
+                                        WHERE id_viagem = :ID", array(':ID' => $id));
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
