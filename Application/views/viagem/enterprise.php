@@ -8,9 +8,6 @@
 </head>
 <body>
     <?php require './Application/views/headers/headerEmp.php'?>
-    <header>
-        </a href="/login/logout">Sair</a>
-    </header>
     <main class="empresaViagem">
         <h2>Viagem para <?php echo $data['destino']['0']['destino_viagem'] ?></h2>
         <h4>Pontos:</h4>
