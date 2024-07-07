@@ -16,27 +16,27 @@
         <section class="pontodiv">
             <?php foreach($data['pontos'] as $ponto){?>
             <div>
-                <div>
+                <div class="info">
                     <h4><?php echo $ponto['apelido_pontoEspera'] ?></h4>
                 </div>
                 <div>
-                    <div>
+                    <div class="info">
                         <p>Rua</p>
                         <p><?php echo $ponto['rua_pontoEspera'] ?></p>
                     </div>
-                    <div>
+                    <div class="info">
                         <p>Bairro</p>
                         <p><?php echo $ponto['bairro_pontoEspera'] ?></p>
                     </div>
-                    <div>
+                    <div class="info">
                         <p>Cidade</p>
                         <p><?php echo $ponto['cidade_pontoEspera'] ?></p>
                     </div>
-                    <div>
+                    <div class="info">
                         <p>Hora</p>
                         <p><?php echo $ponto['hora_pontoEspera'] ?></p>
                     </div>
-                    <div>
+                    <div class="info">
                         <p>Ponto de Referência</p>
                         <p><?php echo $ponto['pontoReferencia_pontoEspera'] ?></p>
                     </div>

@@ -12,8 +12,26 @@ body {
 
 .pontodiv {
   position: relative;
+  background-size: cover;
+  background-color: rgb(243, 213, 225);
+  width: 90%;
+  padding: 10px;
   border-radius: 10px;
-  width: 100%;
+  margin: 0 auto;
+  box-shadow: -3px 3px 0px 1px rgb(214, 132, 163);
+  margin-bottom: 20px;
+}
+
+.pontodiv .info {
+  position: relative;
+  background-size: cover;
+  background-color: rgb(250, 234, 241);
+  width: 90%;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 auto;
+  box-shadow: -3px 3px 0px 1px rgb(214, 132, 163);
+  margin-bottom: 20px;
 }
 
 .input {
