@@ -18,7 +18,7 @@
         <form action="/viagem/confirmacao/<?php echo $data['id'] ?>" method="POST">
         <div>
             <label for="veiculo">Veiculo</label>
-            <select name="veiculo" id="veiculo">
+            <select name="veiculo" id="veiculo" clas="input">
                 <?php foreach($data['veiculos'] as $veiculo){?>
                     <option value="<?php echo $veiculo['id_veiculo'] ?>"><?php echo $veiculo['modelo_veiculo']." - ".$veiculo['placa_veiculo'] ?></option>
                 <?php } ?>
@@ -26,13 +26,13 @@
         </div>
         <div>
             <label for="motorista">motorista</label>
-            <select name="motorista" id="motorista">
+            <select name="motorista" id="motorista" class="input">
                 <?php foreach($data['motoristas'] as $motorista){?>
                     <option value="<?php echo $motorista['id_motorista'] ?>"><?php echo $motorista  ['nome_motorista']?></option>
                 <?php } ?>
             </select>
         </div>
-        <input type="submit" value="Confirmar">
+        <input type="submit" value="Confirmar" class="entrar">
         </form>
     </main>
     <?php require './Application/views/headers/footerPas.php'?>
