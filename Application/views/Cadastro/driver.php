@@ -68,7 +68,7 @@
             <label for="connfirm-senha">Confirme a Senha</label>
             <input type="password" name="confirm-senha" class="input" required>
         </div>
-        
+        <br>
         <input type="submit" value="Cadastrar" class="entrar">
     </form>
 </body>
