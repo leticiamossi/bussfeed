@@ -8,8 +8,8 @@
 </head>
 <body>
 <?php require './Application/views/headers/headerPas.php'?>
-    <form action="/cadastrar/ponto" method="POST">
-
+    <form action="/cadastrar/ponto" method="POST" class="pontoCadastro">
+        <br>
         <div>
             <label for="apelido">Apelido</label>
             <input type="text" name="apelido" class=input required>
@@ -39,7 +39,7 @@
             <label for="hora">Hora</label>
             <input type="time" name="hora" class=input required>
         </div>
-
+        <br>
         <input type="submit" value="Cadastrar" class=entrar required>
     </form>
 </body>

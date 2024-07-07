@@ -40,13 +40,13 @@ body {
   border-radius: 10cm;
 }
 
-.entrar {
-  display: flex;
-  padding: 5px;
-  font-style: italic;
-  background-color: rgb(163, 223, 203);
-  border: 1px;
+.pontoCadastro {
+  position: relative;
+  width: 90%;
+  padding: 10px;
   border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 55px;
 }
 
 .ponto {
