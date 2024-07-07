@@ -9,33 +9,35 @@
 </head>
 <body>
 <?php require './Application/views/headers/headerEmp.php'?>
-    <main class="veiculos">
+    <br>
+    <main>
         <h3>Meus Veículos</h3>
-        <section>
+        <br>
+        <section class="veiculos">
             <?php foreach($data['veiculos'] as $veiculo){ ?>
             <div>
-                <div>
+                <div class="info">
                     <h4><?php echo $veiculo['modelo_veiculo'] ?></h4>
                     <p>Status: <?php echo $veiculo['status_veiculo'] ?></p>
                 </div>
                 <div>
-                    <div>
+                    <div class="info">
                         <p>Modelo</p>
                         <p><?php echo $veiculo['modelo_veiculo'] ?></p>
                     </div>
-                    <div>
+                    <div class="info">
                         <p>Placa</p>
                         <p><?php echo $veiculo['placa_veiculo'] ?></p>
                     </div>
-                    <div>
+                    <div class="info">
                         <p>Marca</p>
                         <p><?php echo $veiculo['marca_veiculo'] ?></p>
                     </div>
-                    <div>
+                    <div class="info">
                         <p>Quantidade de lugares</p>
                         <p><?php echo $veiculo['qtdLugares_veiculo'] ?></p>
                     </div>
-                    <div>
+                    <div class="info">
                         <p>Situação</p>
                         <p><?php echo $veiculo['situacao_veiculo'] ?></p>
                     </div>

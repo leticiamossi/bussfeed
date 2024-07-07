@@ -10,7 +10,6 @@
 
 <body>
 <?php require './Application/views/headers/headerEmp.php'?>
-    <header></header>
     <main>
         <h3>Minhas Viagens</h3>
         <section>

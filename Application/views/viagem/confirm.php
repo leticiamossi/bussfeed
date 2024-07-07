@@ -8,9 +8,6 @@
 </head>
 <body>
 <?php require './Application/views/headers/headerPas.php'?>
-    <header>
-        <a href="/login/logout">Sair</a>
-    </header>
     <main>
         <h3>Viagem 
         <?php 

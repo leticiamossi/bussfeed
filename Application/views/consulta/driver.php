@@ -11,26 +11,27 @@
 <?php require './Application/views/headers/headerEmp.php'?>
     <main>
         <h3>Meus Motoristas</h3>
+        <br>
         <section class="cadastroMotorista">
             <?php foreach($data['motoristas'] as $motorista){?>
             <div>
-                <div>
+                <div class="info">
                     <h4><?php echo $motorista['nome_motorista']?></h4>
                 </div>
                 <div>
-                    <div>
+                    <div class="info">
                         <p>Telefone</p>
                         <p><?php echo $motorista['telefone_motorista']?></p>
                     </div>
-                    <div>
+                    <div class="info">
                         <p>CPF</p>
                         <p><?php echo $motorista['cpf_motorista']?></p>
                     </div>
-                    <div>
+                    <div class="info">
                         <p>CNH</p>
                         <p><?php echo $motorista['cnh_motorista']?></p>
                     </div>
-                    <div>
+                    <div class="info">
                         <p>Categoria CNH</p>
                         <p><?php echo $motorista['categoriaCnh_motorista']?></p>
                     </div>
