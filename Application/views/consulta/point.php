@@ -13,9 +13,9 @@
     <header></header>
     <main>
         <h3>Meus Pontos</h3>
-        <section class="pontodiv">
+        <section>
             <?php foreach($data['pontos'] as $ponto){?>
-            <div>
+            <div class="pontodiv">
                 <div class="info">
                     <h4><?php echo $ponto['apelido_pontoEspera'] ?></h4>
                 </div>
@@ -41,8 +41,8 @@
                         <p><?php echo $ponto['pontoReferencia_pontoEspera'] ?></p>
                     </div>
                 </div>
-                <?php } ?>
             </div>
+            <?php } ?>
         </section>
         <a href="/cadastro/ponto"><button class="input">Cadastrar novo ponto</button></a>
     </main>

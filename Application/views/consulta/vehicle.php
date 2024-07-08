@@ -13,9 +13,9 @@
     <main>
         <h3>Meus Veículos</h3>
         <br>
-        <section class="veiculos">
+        <section>
             <?php foreach($data['veiculos'] as $veiculo){ ?>
-            <div>
+            <div class="veiculos">
                 <div class="info">
                     <h4><?php echo $veiculo['modelo_veiculo'] ?></h4>
                     <p>Status: <?php echo $veiculo['status_veiculo'] ?></p>

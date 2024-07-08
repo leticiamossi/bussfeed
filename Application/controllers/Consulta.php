@@ -67,7 +67,13 @@ class Consulta extends Controller
     // Consulta as viagens realizadas pelo motorista
     public function viagemMotorista()
     {
-        $this->view('consulta/travel-driver');
+        $this->verification();
+        if($this->permission){
+            $id = $_SESSION['ID'];
+            $conn = $this->model('consulta');
+            $data = $conn::listViagemPas($id);
+            $this->view('consulta/viagemmotorista', ['viagens' => $data]);
+        }
     }
 }
 

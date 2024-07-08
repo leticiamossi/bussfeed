@@ -12,9 +12,9 @@
     <main>
         <h3>Meus Motoristas</h3>
         <br>
-        <section class="cadastroMotorista">
+        <section>
             <?php foreach($data['motoristas'] as $motorista){?>
-            <div>
+            <div class="cadastroMotorista">
                 <div class="info">
                     <h4><?php echo $motorista['nome_motorista']?></h4>
                 </div>

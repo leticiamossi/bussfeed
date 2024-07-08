@@ -58,6 +58,19 @@ class Consulta
                                     ORDER BY v.dataViagem_viagem DESC", array(':ID' => $id));
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    // Lista as viagens da empresa
+    public static function listViagemMot(string $id)
+    {
+        $conn = new Database();
+        $result = $conn->executeQuery("SELECT * FROM tb_viagem AS v 
+                                    JOIN tb_veiculosmotoristaviagem AS vmv ON v.id_viagem = vmv.id_viagem
+                                    JOIN tb_veiculo AS veic ON vmv.id_veiculo = veic.id_veiculo
+                                    JOIN tb_motorista AS m ON vmv.id_motorista = m.id_motorista
+                                    WHERE vmv.id_motorista = :ID && v.status_viagem = '0'
+                                    ORDER BY v.dataViagem_viagem DESC", array(':ID' => $id));
+        return $result->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 
 ?>
